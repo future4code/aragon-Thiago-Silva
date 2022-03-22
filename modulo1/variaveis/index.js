@@ -70,11 +70,11 @@ console.log("O novo valor de b é", b)
 
 
 // Desafio
-var num1 = prompt("Digite um número");
-var num2 = prompt("Digite outro número para somar e multiplicar");
+var num1 = prompt("Digite um número")
+var num2 = prompt("Digite outro número para somar e multiplicar")
     
-resultado1 = Number(num1)+Number(num2);
-console.log("X = ", resultado1);
+resultado1 = Number(num1)+Number(num2)
+console.log("X = ", resultado1)
     
 resultado2 = num1*num2;
-console.log("Y = ", resultado2);
+console.log("Y = ", resultado2)
