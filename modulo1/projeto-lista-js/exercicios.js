@@ -99,10 +99,17 @@ function retornaUltimoElemento(array) {
   return array.slice(-1)[0]
 }
 
-// EXERCÍCIO 11
+// EXERCÍCIO 11  
 function trocaPrimeiroEUltimo(array) {
-  
-}
+  let first = array[0]
+  let last = array[array.length - 1]
+  array.splice(0, 1)
+  array.splice(-1,1)
+
+  array = [last,...array,first]
+    return array
+  }
+  trocaPrimeiroEUltimo()
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
@@ -112,10 +119,27 @@ function checaIgualdadeDesconsiderandoCase(string1, string2) {
 checaIgualdadeDesconsiderandoCase()
 
 // EXERCÍCIO 13
-function checaRenovacaoRG() {
-  // implemente sua lógica aqui
+function checaRenovacaoRG(anoAtual,anoNascimento,anoEmissaoRG) {
+  anoAtual = Number(prompt("Qual o ano atual?"))
+  anoNascimento = Number(prompt("Qual o seu ano de nascimento?"))
+  anoEmissaoRG = Number(prompt("Qual é o ano de emissão do seu RG?"))
+  
+  let idade = anoAtual - anoNascimento
+  let tempoEmissaoRG = anoAtual - anoEmissaoRG
+  
+    let condicaoAteVinteAnos = idade <= 20
+    condicaoAteVinteAnos = tempoEmissaoRG >= 5 
+    
+    let condicaoDeVinteACinquentaAnos = 21 < idade <= 50
+    condicaoDeVinteACinquentaAnos = tempoEmissaoRG >= 10
 
+    let condicaoAcimaCinquentaAnos = idade > 50
+    condicaoAcimaCinquentaAnos = tempoEmissaoRG >= 15
+
+    return condicaoAteVinteAnos == condicaoDeVinteACinquentaAnos == condicaoAcimaCinquentaAnos
 }
+    
+checaRenovacaoRG()
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
