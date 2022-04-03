@@ -12,11 +12,11 @@ if(confirm("Quer iniciar uma nova rodada?")) {
    console.log(`Usuário - cartas: ${carta1Usuario.texto} ${carta2Usuario.texto} - ${pontuacaoUsuario}`)
    console.log(`Computador - cartas: ${carta1Computador.texto} ${carta2Computador.texto} - ${pontuacaoComputador}`)
    
-      if (pontuacaoUsuario > pontuacaoComputador && pontuacaoUsuario > 21) {
+      if (pontuacaoUsuario > 21) {
       console.log("O computador ganhou!")
       } else if (pontuacaoUsuario > pontuacaoComputador) {
       console.log("O usuário ganhou!")
-      } else if (pontuacaoComputador > pontuacaoUsuario && pontuacaoComputador > 21) {
+      } else if (pontuacaoComputador > 21) {
       console.log("O usuário ganhou!")
       } else if (pontuacaoComputador > pontuacaoUsuario) {
       console.log("O computador ganhou!")
