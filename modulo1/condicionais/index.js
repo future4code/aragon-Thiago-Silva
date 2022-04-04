@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbda3aae34079e9e57e2916bb442de1f8d76357
 // Exercício 1
 
 let condicao = true
@@ -58,7 +61,11 @@ for(let palavra of palavras){
    
 }
 console.log(frase)
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 0fbda3aae34079e9e57e2916bb442de1f8d76357
 // Exercício 1 - Interpretação de código
 // a) O código verifica se o número escolhido no prompt é número par " numero % 2 === 0" ou senão, ímpar 
 //    e imprime uma frase para cada condição.
@@ -175,6 +182,10 @@ const TipoDeJogoDomestico = {
 }
 
 function compraIngresso(tipoDeJogo,etapaDoJogo,categoria){
+<<<<<<< HEAD
     
 } 
 >>>>>>> beeed11bc468cf0d2718fdb0548d9c8f950b524b
+=======
+} 
+>>>>>>> 0fbda3aae34079e9e57e2916bb442de1f8d76357
