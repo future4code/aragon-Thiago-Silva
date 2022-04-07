@@ -153,3 +153,8 @@ td button {
 .btn-hover-active:active {
     background-color: #ffef43;
 }
+
+table, ol, h2, p, h3 {
+    font-family: Arial;
+    font-size: 15px;
+}
