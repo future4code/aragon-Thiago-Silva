@@ -31,13 +31,9 @@ img {
     width: 100px;
 }
 
-div>p:first-child {
-    display: inline;
-}
-
-div img {
+/* div img { */
     /* background: black; */
-}
+/* } */
 
 .botao-amarelo {
     background-color: #ffaf43;
@@ -57,7 +53,6 @@ div img {
 .container {
     height: 400px;
     text-align: center;
-    padding-left: 10px;
 }
 
 .icone {
@@ -75,12 +70,13 @@ div img {
     background-color: #2274a5;
     color: white;
     padding-top: 15px;
-    text-align: left;
+    text-align: center;
 }
 
 #container-de-descricao>ol {
     padding: 15px 0px;
-    padding-left: 15px;
+    width: 200px;
+    margin: auto;
 }
 
 #container-para-comprar {
@@ -132,6 +128,9 @@ td button {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
 }
 
 #back-button:hover {
@@ -141,10 +140,15 @@ td button {
 #lupa {
     height: 15px;
     width: 15px;
+    padding: 0;
 }
 
 #lupa:hover {
-    background-color: #c44f00;
+    opacity: 0.4;
+}
+
+#lupa:active {
+    opacity: 1;
 }
 
 .btn-hover-active:hover {
