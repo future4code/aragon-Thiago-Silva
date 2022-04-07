@@ -143,3 +143,11 @@ td button {
 #lupa:hover {
     background-color: #c44f00;
 }
+
+.btn-hover-active:hover {
+    background-color: #ffaf43;
+}
+
+.btn-hover-active:active {
+    background-color: #ffef43;
+}
