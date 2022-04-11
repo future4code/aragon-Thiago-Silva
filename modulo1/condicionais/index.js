@@ -174,3 +174,6 @@ const TipoDeJogoDomestico = {
 }
 
 function compraIngresso(tipoDeJogo,etapaDoJogo,categoria){
+
+=======
+} 
