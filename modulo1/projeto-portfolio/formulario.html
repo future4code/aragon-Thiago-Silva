@@ -5,14 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Contato</title>
+    <title>Thiago Vernizzi</title>
 </head>
 <body>
-    <header>
-        <a href="index.html">Quem sou eu</a>
-        <a href="portfolio.html">Portfólio</a>
-        <a href="formulario.html">Contato</a>
-    </header>
-    
+    <section>
+        <header id="menu" >
+                <ul>
+                    <li><a href="index.html">Quem sou eu</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="formulario.html">Contato</a></li>
+                </ul>
+        </header>
+        <img id="logo-portfolio" src="img/logo.png" width="10%" alt="logo com nome Thiago Vernizzi - Devoloper Web Full Stack">
+    </section>
+    <div class="back-white">
+        <h1 id="titulo">Escreva sua mensagem</h1>
+        <p id="subtitulo">Complete suas informações</p>
+        <br>
+    </div>
+    <form class="back-white">
+        <fieldset class="grupo" class="container-contato">
+            <div classe="campo" >
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" nome="nome" id="nome" required>
+            </div>
+
+            <div classe="campo">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" nome="sobrenome" id="sobrenome" required>
+            </div>
+
+            <div classe="campo">
+                <label for="email"><strong>Email</strong></label>
+                <input type="text" nome="email" id="email" required>
+            </div class="container-contato">
+        </fieldset>
+        <div>
+            <label><strong>Assunto</strong></label>
+            <select id="assunto">
+                <option selected disabled value="">Selecione o assunto</option>
+                <option>Orçamento</option>
+                <option>Networking</option>
+                <option>Dúvidas</option>
+                <option>Palestra</option>
+                <option>Mentoria</option>
+            </select>
+        </div>
+
+        <div>
+            <br>
+            <label><strong>Escreva sua mensagem</strong></label>
+            <textarea rows="6" style="width: 26em" id="mensagem" name="mensagem"></textarea>
+        </div>
+
+        <button classe="botao3" type="submit">Concluído</button>
+    </form>
+
+
+    </main>
+        <footer>
+        <a id="" class="rodape" href="mailto:thiago.vernizzi@gmail.com">thiago.vernizzi@gmail.com</a>
+        <br>
+        <h3 class="rodape-inline">Redes Sociais</h3>
+        <a href="//github.com/thiagovernizzi/" target="_blank"><img src="img/github.png" class="redes-sociais" alt="logo do github" width="3.4%"></a>
+        <a href="//www.linkedin.com/in/thiagovernizzi/" target="_blank"><img class="redes-sociais" src="img/linkedin.png"  width=3.4% alt="logo do github"></a>
+        <a href="//www.instagram.com/thiago.izzi/" target="_blank"><img class="redes-sociais" src="img/instagram.png" width=3% alt="logo do instagram"></img></a>
+        <a href="//wa.me/5511991407194" target="_blank"><img class="redes-sociais" src="img/whatsapp.png" width=3% alt="logo do whatsapp"></img></a>
+        <h5 class="copyright">Copyright © 2022 Thiago Vernizzi All rights reserved.</h5>
+    </footer>
 </body>
 </html>
