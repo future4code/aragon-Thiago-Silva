@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: mediumvioletred;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    width: 10px;
+    height: 10px;
+    align-items: center;
+}
+
+#docinho {
+    width: 5vh;
+    padding-right: 2vh;
+
+}
+
+.nome-produto {
+    text-align: center;
+}
+
+#bolo-bonito {
+
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    
+}
+
+.catalogo {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.catalogo div{
+    padding: 10px;
+
+}
+
+.catalogo div p {
+    margin-top: 5px;
+}
+
+.descricao-produto {
+    text-align: center;
+}
+
+.menu-lateral {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #f2d0e0;
+}
+
+footer {
+    background-color: mediumvioletred;
+    padding: 10px;  
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    width: 40vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.icone {
+     width: 20px;
+     margin-right: 20px;
+} 
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    box-shadow: lightgray 2px 2px;  
+}
+
+.card img {
+    width: 40vh;
+    flex-grow: 1;
+}
+
+.confeitaria {
+    display: center;
+}
+
+.seta {
+    width: 4vh;
+    height: 4vh;
+}
