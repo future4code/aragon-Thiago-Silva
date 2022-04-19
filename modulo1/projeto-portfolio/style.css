@@ -1,0 +1,281 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+header {
+    text-align: center;
+}
+
+#menu{
+    align-items: center;
+    display: block;
+    font-family: arial;
+}
+
+#menu ul {
+      list-style: none;
+}
+
+#menu ul li {
+    display: inline;
+    padding-right:50px;
+}
+
+#menu ul li a {
+    color: #FFF;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+#menu ul li a:hover {
+    background-color: rgb(23, 189, 204);
+    border-radius: 20px;
+}
+
+#logo {
+    width: 550px;
+    height: 550px;
+    display: block;
+    margin: auto;
+    align-items: center;
+}
+
+#logo-portfolio {
+    animation-iteration-count: infinite;
+}
+
+#foto {
+    border-radius: 60px;
+    width: 500px;
+    padding-bottom: 10px;
+}
+
+/* h2 {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+.div-1 {
+    display: flex;
+}
+
+.text-type-1 {
+    color: white;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.div-2, .inst-ensino {
+    text-align: center;
+    background-color: white;
+    padding-top: 30px;
+}
+
+.clientes, .inst-ensino, .skills {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: rgb(27, 79, 97);
+}
+
+.logo-empresa {
+    justify-content: center;
+    padding-right: 50px;
+    vertical-align:middle;
+}
+
+.skills {
+    
+    margin-top: 16px;
+    display: inline;
+    padding-right: 7vw;
+    padding-left: 16vw;
+    margin-right: 9vw;
+}
+
+.lista-skills {
+    margin-top: 16px;
+    display: grid;
+    width: auto;
+    grid-template-columns: 50% 50%;
+    font-size: 20px;
+    padding-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(70, 70, 70)
+}
+
+.instituicoes {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* list-style: none; */
+    padding-bottom: 50px;
+    text-align: start;
+    margin-left: 20px;
+    color: rgb(70, 70, 70);
+
+}
+
+.rodape {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    display: block;
+    text-decoration-line: none;
+    
+}
+.rodape-inline {
+    padding-bottom: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 300px;
+    display: inline;
+}
+
+.redes-sociais {
+    margin-left: 50px;
+}
+
+.copyright {
+    display: inline;
+    color: white;
+    margin-left: 50px;
+}
+
+#botao-topo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-decoration-line: none;
+}
+
+.div-portfolio {
+    background-color: white;
+    height: 70vw;
+}
+
+.divinline {
+    background-color: white;
+    text-align: center;
+}
+
+.menu-port {
+    height: 18vw;
+}
+
+#img-site-loja {
+    width: 50vw;
+}
+
+#img-minicurso {
+    width: 50vw;
+    margin-top: 30px;
+}
+
+.div-projetos {
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.div-labenu {
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-arial {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(70, 70, 70);
+    text-align: justify;
+}
+
+.grid {
+display: grid;
+width: auto;
+grid-template-columns: 25% 25%;
+font-family: Arial, Helvetica, sans-serif;
+color: rgb(70, 70, 70);
+}
+
+.container-contato{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(57, 55, 55);
+    margin-left: 10%;
+}
+
+.back-white {
+    background-color: white;
+}
+
+#subtitulo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(57, 55, 55);
+    margin-left: 10%;
+} */
+
+fieldset {
+    margin: 0;
+}
+
+/* section {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+} */
+
+input, select, textarea, button {
+    border-radius: 5px;
+}
+
+.campo {
+    margin-bottom: 1em;
+}
+
+.campo label {
+    margin-bottom: 0.2em;
+    display: block;
+}
+
+fieldset.grupo .campo {
+    float: left;
+    margin-right: 1em;
+}
+
+.campo input[type="text"], .campo input[type="email"], .campo textarea {
+    padding: 0.2em;
+    border: 1px solid royalblue;
+    box-shadow: 2px 2px 2px rgb(0,0,0,0.2); 
+    display: block;
+}
+
+.botao3:hover {
+    background-color: aqua;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+form {
+    text-align: start;
+    padding-left: 10px;
+}
