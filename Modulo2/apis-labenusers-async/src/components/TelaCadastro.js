@@ -1,13 +1,13 @@
-import React from "react";
+// import React from "react";
 
-export default class TelaCadastro extends React.Component {
-    render() {
-        return (
-            <div>
+// export default class TelaCadastro extends React.Component {
+//     render() {
+//         return (
+//             <div>
 
-            Tela Cadastro
+//             Tela Cadastro
 
-            </div>
-        )
-    }
-}
+//             </div>
+//         )
+//     }
+// }
