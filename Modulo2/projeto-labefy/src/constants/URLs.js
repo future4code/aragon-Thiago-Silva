@@ -1,1 +1,1 @@
-// export const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy"
+export const BASE_URL = "https://us-central1-labenu-apis.cloudfunctions.net/labefy"
