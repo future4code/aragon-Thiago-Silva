@@ -1,6 +1,17 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { BASE_URL, ALUNO } from '../constants/urls'
+import styled from 'styled-components'
+
+const ProfilePageStyle = styled.div`
+ * {
+     text-align: center
+ }
+
+ img {
+     border-radius: 15px
+ }
+`
 
 function ProfilesPage() {
 
@@ -26,6 +37,37 @@ function ProfilesPage() {
             })
     }
 
+    const chooseProfile = (profileId, choice) => {
+        const url = `${BASE_URL}/${ALUNO}/choose-person`
+
+        const body = {
+            id: profileId,
+            choice: choice
+        }
+
+        axios
+        .post(url, body)
+        .then( () => {
+            getProfile()
+        } )
+        .catch( (error) => {
+            console.log(error.message)
+        } )
+    } 
+
+    const resetProfiles = () => {
+        const url = `${BASE_URL}/${ALUNO}/clear`
+
+        axios
+        .put(url)
+        .then( () => {
+            alert("Perfis resetados com sucesso!")
+        } )
+        .catch( (error) => {
+            console.log(error.message)
+        } )
+    }
+
     const profileCard = profile && (
         <section>
             <img
@@ -37,15 +79,18 @@ function ProfilesPage() {
             <p>{profile.name}, {profile.age}</p>
             <p>{profile.bio}</p>
 
-            <button onClick={() => getProfile()}>Próximo Perfil</button>
+            <button onClick={() => chooseProfile(profile.id, false)}>Dislike</button>
+            <button onClick={() => chooseProfile(profile.id, true)}>Like</button>
         </section>
     )
 
     return (
-        <div>
+        <ProfilePageStyle>
             <p>PÁGINA DE PERFIS</p>
             {profileCard}
-        </div>
+            <br />
+            <button onClick={ () => resetProfiles() } >Resetar Perfis</button>
+        </ProfilePageStyle>
     )
 }
 

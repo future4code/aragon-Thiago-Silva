@@ -27,7 +27,7 @@ function App() {
   }
 
   return (
-    <div>
+    <section>
       <Header
         page={page}
         goToProfilesPage={goToProfilesPage}
@@ -37,7 +37,7 @@ function App() {
       <main>
         {renderCurrentPage()}
       </main>
-    </div>
+    </section>
   );
 }
 
