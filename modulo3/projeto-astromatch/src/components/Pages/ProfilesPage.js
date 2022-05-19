@@ -1,21 +1,10 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { BASE_URL, ALUNO } from '../constants/urls'
-import styled from 'styled-components'
-
-const ProfilePageStyle = styled.div`
- * {
-     text-align: center
- }
-
- img {
-     border-radius: 15px
- }
-`
 
 function ProfilesPage() {
 
-    const [profile, setProfile] = useState(undefined)
+    const [profile, setProfile] = useState({})
 
     useEffect(() => {
         getProfile()
@@ -29,7 +18,6 @@ function ProfilesPage() {
             .get(url)
             .then((response) => {
                 setProfile(response.data.profile)
-                console.log(response.data)
             })
             .catch((error) => {
                 alert("Tente novamente mais tarde.")
@@ -46,51 +34,63 @@ function ProfilesPage() {
         }
 
         axios
-        .post(url, body)
-        .then( () => {
-            getProfile()
-        } )
-        .catch( (error) => {
-            console.log(error.message)
-        } )
-    } 
+            .post(url, body)
+            .then((response) => {
+                if (body.choice && response.data.isMatch) {
+                    alert("Match. Hoje tem!")
+                }
+                getProfile()
+            })
+            .catch((error) => {
+                console.log(error.message)
+            })
+    }
 
     const resetProfiles = () => {
         const url = `${BASE_URL}/${ALUNO}/clear`
 
         axios
-        .put(url)
-        .then( () => {
-            alert("Perfis resetados com sucesso!")
-        } )
-        .catch( (error) => {
-            console.log(error.message)
-        } )
+            .put(url)
+            .then(() => {
+                alert("Perfis resetados com sucesso!")
+                getProfile()
+            })
+            .catch((error) => {
+                console.log(error.message)
+            })
     }
 
-    const profileCard = profile && (
+    const profileCard = profile ? (
         <section>
-            <img
+            
+            
+            <div className='card-perfil'>
+                <button onClick={() => chooseProfile(profile.id, false)}>Dislike</button>
+                <img
                 src={profile.photo}
                 alt={profile.photo_alt}
                 height={"240px"}
-            >            
+            >
             </img>
-            <p>{profile.name}, {profile.age}</p>
+                <button onClick={() => chooseProfile(profile.id, true)}>Like</button>
+            </div>
+
+            <strong>{profile.name}, {profile.age}</strong>
             <p>{profile.bio}</p>
 
-            <button onClick={() => chooseProfile(profile.id, false)}>Dislike</button>
-            <button onClick={() => chooseProfile(profile.id, true)}>Like</button>
         </section>
+    ) : (
+        <div>
+            <h3>Acabaram os matches! Clique em 'Resetar Perfis' para reiniciar</h3>
+            <button onClick={() => resetProfiles()} >Resetar Perfis</button>
+        </div>
     )
 
     return (
-        <ProfilePageStyle>
-            <p>PÁGINA DE PERFIS</p>
+        <div>
+            <p>Página de Perfis</p>
             {profileCard}
-            <br />
-            <button onClick={ () => resetProfiles() } >Resetar Perfis</button>
-        </ProfilePageStyle>
+        </div>
     )
 }
 

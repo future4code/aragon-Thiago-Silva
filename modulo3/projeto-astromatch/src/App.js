@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Header from './components/Header';
 import ProfilesPage from './components/Pages/ProfilesPage'
 import MatchesPage from './components/Pages/MatchesPage'
+import './app.css'
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
   }
 
   return (
-    <section>
+    <div>
       <Header
         page={page}
         goToProfilesPage={goToProfilesPage}
@@ -37,7 +38,7 @@ function App() {
       <main>
         {renderCurrentPage()}
       </main>
-    </section>
+    </div>
   );
 }
 
