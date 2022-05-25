@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { navigateToHome } from '../routes/cordinator'
+import { navigateToHome } from '../routes/coordinator'
 
 function ErrorPage() {
     const navigate = useNavigate()
