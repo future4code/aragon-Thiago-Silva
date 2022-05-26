@@ -32,7 +32,11 @@ function Header() {
 
     const renderHeader =
         localStorage.getItem("token") ?
-            (<button onClick={logout}>Logout</button>)
+            (
+            <>
+            <button onClick={logout}>Logout</button>
+            <br/>
+            </>)
             : (
                 <section>
                     <label htmlFor={"email"}>E-mail: </label>
@@ -44,7 +48,8 @@ function Header() {
                         onChange={handleInputValues}
                     />
                     <br />
-                    <label htmlFor={"password"}>Senha: </label>
+                    <br />
+                    <label htmlFor={"password"}>Senha:</label>
                     <input
                         id={"password"}
                         type={"password"}
@@ -52,6 +57,7 @@ function Header() {
                         value={password}
                         onChange={handleInputValues}
                     />
+                    <br />
                     <br />
                     <button onClick={login}>Entrar</button>
                     {/* Poderia ser utilizado <form onSubmit={login}> </form> entre o código acima com type="submit" no button*/}
@@ -62,6 +68,7 @@ function Header() {
         <main>
             <h1>LabeX</h1>
             {renderHeader}
+            <br />
             <hr />
         </main>
     )

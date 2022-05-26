@@ -1,14 +1,42 @@
+import { useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import Header from "../components/Header"
+import useRequestData from "../hooks/useRequestData"
+import { navigateToAdminPage } from "../routes/coordinator"
+import TripCard from '../components/TripCard'
 
-function HomePage () {
+
+function HomePage() {
+
+    const navigate = useNavigate()
+
+    const [tripsData] = useRequestData("trips", {})
+
+    useEffect(() => {
+        if (localStorage.getItem("token")) {
+            navigateToAdminPage(navigate)
+        }
+    }, [])
+
+    const tripList = tripsData.trips ? tripsData.trips.map((trip) => {
+        return (
+            <TripCard
+                key={trip.id}
+                trip={trip}
+            />
+        )
+    }) : (<p>Carregando...</p>)
+
     return (
         <main>
-            <Header 
-            currentPage={"home-page"}
+            <Header
+                currentPage={"home-page"}
             />
-            <h3>Inscreva-se numa nova viagem</h3>
+            <h2>Inscreva-se numa nova viagem</h2>
             <hr />
-            <h3>Lista de Viagens</h3>
+            <h2>Lista de Viagens</h2>
+            {tripList}
+            <hr />
         </main>
     )
 }

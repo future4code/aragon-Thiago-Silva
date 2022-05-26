@@ -21,3 +21,23 @@ export const requestLogin = (email, password, navigate) => {
         console.log(error)
     })
 }
+
+    export const deleteTrip = (tripId, getTripsData) => {
+        const header = {
+            headers: {
+                auth: localStorage.getItem('token')
+            }
+        }
+
+        axios
+        .delete(`${BASE_URL}/${API_CLIENT}/trips/${tripId}`, header)
+        .then(() => {
+            alert("Viagem excluída com sucesso!")
+            getTripsData()
+        })
+        .catch((error) => {
+            alert(error.message)
+            console.log(error.message)
+        })
+    }
+
