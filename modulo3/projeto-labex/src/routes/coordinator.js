@@ -7,5 +7,5 @@ export const navigateToAdminPage = (navigate) => {
 }
 
 export const navigateToTripDetailsPage = (navigate) => {
-    navigate("/admins/:tripId/details")
+    navigate("/admin/:tripId/details")
 }

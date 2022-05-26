@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router-dom"
+import { navigateToTripDetailsPage } from "../routes/coordinator"
+
 function TripCard (props) {
-    
+    const navigate = useNavigate()
+
     const {id, name, description, planet, durationInDays, date} = props.trip
 
     const token =  localStorage.getItem('token')
@@ -15,7 +19,7 @@ function TripCard (props) {
 
         {token && (
             <section>
-                <button>Exibir detalhes</button>
+                <button onClick={() => navigateToTripDetailsPage(navigate, id)}>Exibir detalhes</button>
                 <button onClick={() => props.removerTrip(id)}>Excluir viagem</button>
                 <br />
                 <br />
