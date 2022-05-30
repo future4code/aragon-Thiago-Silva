@@ -39,7 +39,7 @@ function AdminPage() {
         }
     }
 
-    const tripList = tripsData.trips ? tripsData.trips.map((trip) => {
+    const tripsList = tripsData.trips ? tripsData.trips.map((trip) => {
         return (
             <TripCard
                 key={trip.id}
@@ -54,7 +54,6 @@ function AdminPage() {
             <Header
                 currentPage={"admin"}
             />
-            <hr />
             <section>
                 <h2>Crie uma nova viagem</h2>
                 <form onSubmit={onClickCreate}>
@@ -68,6 +67,8 @@ function AdminPage() {
                         title={'O nome da viagem deve ter no mínimo 5 caracteres'}
                         required
                     />
+                    <br />
+                    <br />
                     <label htmlFor={'planet'}>Planeta:</label>
                     <select
                         id={'planet'}
@@ -82,6 +83,8 @@ function AdminPage() {
                             return <option value={planet} key={planet}>{planet}</option>
                         })}
                     </select>
+                    <br />
+                    <br />  
                     <label htmlFor={"date"}>Data de lançamento: </label>
                     <input
                         id={'date'}
@@ -92,6 +95,8 @@ function AdminPage() {
                         min={actualDate()}
                         required
                     />
+                     <br />
+                     <br />
                     <label htmlFor={"description"}> Descrição: </label>
                     <input
                         id={"description"}
@@ -102,6 +107,8 @@ function AdminPage() {
                         title={"O nome deve ter no mínimo 20 caracteres"}
                         required
                     />
+                     <br />
+                     <br />
                     <label htmlFor={"duration"}> Duração &#40;em dias&#41;: </label>
                     <input
                         id={"duration"}
@@ -118,7 +125,7 @@ function AdminPage() {
             </section>
             <section>
                 <h2>Lista de Viagens</h2>
-                {tripList}
+                {tripsList}
             </section>
         </main>
     )

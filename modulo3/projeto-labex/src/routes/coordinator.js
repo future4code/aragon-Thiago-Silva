@@ -6,6 +6,6 @@ export const navigateToAdminPage = (navigate) => {
     navigate("/admin")
 }
 
-export const navigateToTripDetailsPage = (navigate) => {
-    navigate("/admin/:tripId/details")
+export const navigateToTripDetailsPage = (navigate, tripId) => {
+    navigate(`/admin/${tripId}/details`)
 }

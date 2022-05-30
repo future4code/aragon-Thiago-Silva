@@ -49,7 +49,7 @@ function Header() {
                     />
                     <br />
                     <br />
-                    <label htmlFor={"password"}>Senha:</label>
+                    <label htmlFor={"password"}>Senha: </label>
                     <input
                         id={"password"}
                         type={"password"}

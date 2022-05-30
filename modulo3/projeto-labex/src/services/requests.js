@@ -9,27 +9,26 @@ export const requestLogin = (email, password, navigate) => {
     }
 
     axios
-    .post(`${BASE_URL}/${API_CLIENT}/login`, body)
-    .then((response) => {
-        console.log(response.data)
-        localStorage.setItem("token", response.data.token)
-        alert("Login realizado com sucesso!")
-        navigateToAdminPage(navigate)
-    })
-    .catch((error) => {
-        alert("Um erro ocorreu. Tente novamente!")
-        console.log(error)
-    })
+        .post(`${BASE_URL}/${API_CLIENT}/login`, body)
+        .then((response) => {
+            localStorage.setItem("token", response.data.token)
+            alert("Login realizado com sucesso!")
+            navigateToAdminPage(navigate)
+        })
+        .catch((error) => {
+            alert("Um erro ocorreu. Tente novamente!")
+            console.log(error.response.message)
+        })
 }
 
-    export const deleteTrip = (tripId, getTripsData) => {
-        const header = {
-            headers: {
-                auth: localStorage.getItem('token')
-            }
+export const deleteTrip = (tripId, getTripsData) => {
+    const header = {
+        headers: {
+            auth: localStorage.getItem('token')
         }
+    }
 
-        axios
+    axios
         .delete(`${BASE_URL}/${API_CLIENT}/trips/${tripId}`, header)
         .then(() => {
             alert("Viagem excluída com sucesso!")
@@ -37,18 +36,18 @@ export const requestLogin = (email, password, navigate) => {
         })
         .catch((error) => {
             alert(error.message)
-            console.log(error.message)
+            console.log(error.response.message)
         })
+}
+
+export const createTrip = (body, clear, getTripsData) => {
+    const header = {
+        headers: {
+            auth: localStorage.getItem('token')
+        }
     }
 
-    export const createTrip = (body, clear, getTripsData) => {
-        const header = {
-            headers: {
-                auth: localStorage.getItem('token')
-            }
-        }
-
-        axios
+    axios
         .post(`${BASE_URL}/${API_CLIENT}/trips`, body, header)
         .then(() => {
             alert("Viagem criada com sucesso!")
@@ -56,6 +55,47 @@ export const requestLogin = (email, password, navigate) => {
             getTripsData()
         })
         .catch((error) => {
-            alert(error.message)
+            alert(error.response.message)
         })
+}
+
+export const decideCandidate = (tripID, candidateId, decision, getTripsDetail) => {
+
+    const header = {
+        headers: {
+            auth: localStorage.getItem('token')
+        }
     }
+   
+    const body = {
+        approve: decision
+    }
+
+    axios
+        .put(
+            `${BASE_URL}/${API_CLIENT}/trips/${tripID}/candidates/${candidateId}/decide`,
+            body,
+            header
+        )
+        .then(() => {
+            decision ? 
+            alert('Candidato aceito com sucesso!')
+            : alert('Candidato reprovado com sucesso!')
+            getTripsDetail()
+        })
+        .catch((error) => {
+            alert(error.response.message)
+        })
+}
+
+export const sendApplication = (body, tripId, clear) => {
+    axios
+    .post(`${BASE_URL}/${API_CLIENT}/trips/${tripId}/apply`, body)
+    .then(() => {
+        alert('Sua candidatura foi recebida com sucesso!')
+        clear()
+    })
+    .catch((error) => {
+        alert(error.response.message)
+    })
+}

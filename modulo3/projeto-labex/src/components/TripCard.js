@@ -20,7 +20,7 @@ function TripCard (props) {
         {token && (
             <section>
                 <button onClick={() => navigateToTripDetailsPage(navigate, id)}>Exibir detalhes</button>
-                <button onClick={() => props.removerTrip(id)}>Excluir viagem</button>
+                <button onClick={() => props.removeTrip(id)}>Excluir viagem</button>
                 <br />
                 <br />
             </section>
