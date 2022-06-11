@@ -21,7 +21,7 @@ function PostDetailsPage() {
 
     const { states, getters } = useContext(GlobalStateContext);
 
-    const { post, postComments } = states;
+    const { post, postComments, isLoading } = states;
 
     const { getPostComments } = getters;
 
@@ -79,14 +79,14 @@ function PostDetailsPage() {
                         title={"O nome deve ter no mínimo 5 caracteres"}
                         required
                     />
-                    <br />
+                     <br />
                     <button type={"submit"}>Criar Post</button>
                 </form>
             </section>
             <hr />
             <section>
                 <h2>Lista de Comentários</h2>
-                {showComments}
+                {isLoading ? <p>CARREGANDO...</p> : showComments}
             </section>
         </main>
     );

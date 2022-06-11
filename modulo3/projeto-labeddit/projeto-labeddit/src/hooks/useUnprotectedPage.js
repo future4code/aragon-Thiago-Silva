@@ -10,7 +10,7 @@ export const useUnprotectedPage = () => {
     if (token) {
       goToFeedPage(navigate);
     }
-  });
+  },[]);
 };
 
 export default useUnprotectedPage;
