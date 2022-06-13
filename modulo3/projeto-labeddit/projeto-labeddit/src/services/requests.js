@@ -213,7 +213,6 @@ export const requestDeleteCommentVote = (
   getPostComments,
   postId
 ) => {
-
   const header = {
     headers: {
       authorization: localStorage.getItem("token"),

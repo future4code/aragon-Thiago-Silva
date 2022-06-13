@@ -23,7 +23,6 @@ function SignUpPage() {
             <Header
                 isProtected={false}
             />
-            <hr />
             <section>
                 <h2>Cadastro de Novo Usuário</h2>
                 <form onSubmit={signup}>
