@@ -1,0 +1,31 @@
+* {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray
+}
+
+img {
+    border-radius: 15px;
+}
+
+button {
+    border-radius: 6px;
+    width: 10vw;
+    height: 5vh;
+    border: none;
+    font-weight: bold;
+    background-color: aliceblue;
+}
+
+button:hover {
+    background-color: lightskyblue;
+    box-shadow: 0 0 10px grey;
+}
+
+.card-perfil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
