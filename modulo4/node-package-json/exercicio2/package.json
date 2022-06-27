@@ -1,0 +1,15 @@
+{
+  "name": "exercicio2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && node ./exercicio2.js"
+  },
+  "keywords": [],
+  "author": "Thiago Vernizzi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
