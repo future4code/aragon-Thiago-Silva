@@ -1,0 +1,20 @@
+{
+  "name": "template-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./build/index.js",
+    "exercicio1": "tsc && node ./build/exercicio1.js",
+    "exercicio2": "tsc && node ./build/exercicio2.js",
+    "exercicio3": "tsc && node ./build/exercicio3.js",
+    "exercicio4": "tsc && node ./build/exercicio4.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^4.7.4"
+  }
+}
