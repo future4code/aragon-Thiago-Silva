@@ -60,8 +60,8 @@ const itens: Produtos[] = [
   { nome: "Pokebola", quantidade: 200, valorUnitario: 99.9915 },
 ];
 
-function ordenaEstoque(itens: Produtos[]):Produtos[] {
-  const itensComValorAtualizado: Produtos[] = itens.map((item: any): any => {
+function ordenaEstoque(itens:Produtos[]) {
+  const itensComValorAtualizado = itens.map((item: any) => {
     const valorAtualizado = item.valorUnitario.toFixed(2).replace(".", ",");
 
     const itensAtualizados: Produtos = {
@@ -72,12 +72,11 @@ function ordenaEstoque(itens: Produtos[]):Produtos[] {
 
     return itensAtualizados;
   });
-  const copiaItens:Produtos[] = [...itensComValorAtualizado]
-   const resultado:Produtos[] = copiaItens.sort((a:any,b:any):any => {
-    a.quantidade - b.quantidade
-  })
 
-  return resultado
+  const compare = (a:Produtos, b:Produtos) => {
+    return a.quantidade < b.quantidade ? -1 : a.quantidade > b.quantidade ? 1 : 0
+  };
+
+  return itensComValorAtualizado.sort(compare);
 }
-
 console.log(ordenaEstoque(itens));
