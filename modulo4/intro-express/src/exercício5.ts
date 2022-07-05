@@ -18,9 +18,13 @@
 // - Utilize o método .map() para identificar
 //  o usuário selecionado e efetuar a modificação.
 
-
 import express, {Request, Response} from 'express'
 import cors from 'cors'
+
+const app = express()
+
+app.use(cors())
+app.use(express.json())
 
 type Usuarios = {
     id:number,
