@@ -1,11 +1,11 @@
-export type Tarefas = {
+export type Tarefa = {
     userId: number,
     id: number,
     title: string,
     completed: boolean
 }
 
-export const tarefas: Tarefas[] = [
+export const tarefas: Tarefa[] = [
     {
       userId: 1,
       id: 1,

@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node ./build/index.js"
+    "start": "tsc && node ./build/index.js",
+    "apiteste": "tsc && node ./build/apiTeste.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Thiago Vernizzi",
   "license": "ISC",
   "devDependencies": {
     "@types/cors": "^2.8.12",
