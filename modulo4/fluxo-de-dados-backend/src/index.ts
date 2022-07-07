@@ -136,9 +136,9 @@ app.post("/dados/:id", (req: Request, res: Response) => {
 
   // Variável novaFruta -> Objeto que representa o novo dado.
   const novaFruta: Fruta = {
-    id: "1usuario",
+    id: "fruta4",
     name: "uva",
-    price: 8,
+    price: 10,
   };
 
   // Atualização da lista de frutas.
@@ -147,7 +147,7 @@ app.post("/dados/:id", (req: Request, res: Response) => {
   // Resposta em formato de objeto, com as propriedades message e list.
   res.status(201).send({
     message: "Criado com sucesso!",
-    toDos: dados,
+    todos: dados,
   });
 });
 
