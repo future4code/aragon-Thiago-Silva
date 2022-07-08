@@ -1,4 +1,11 @@
-// Exercício 1
+// ## Exercício 1
+
+// Crie um arquivo chamado data.ts que contenha e exporte o seguinte array de usuários:
+
+// Dicas:
+
+// - Cada usuário deve ser representado por um type User, com as propriedades definidas acima.
+// - A propriedade ‘role’ deve ser um enum USER_ROLE com os seguintes valores possíveis: “ADMIN” ou “NORMAL”.
 
 export enum USER_ROLE {
     ADMIN = "ADMIN",
