@@ -1,5 +1,3 @@
-<img src="/docs/logo.png" alt="Koa middleware framework for nodejs"/>
-
 <h1 align="center"><b>Labebank - Sistema Bancário</b></h1>
 
 O projeto Labebank é um sistema bancário simplificado, com as seguintes funcionalidades:
