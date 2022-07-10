@@ -1,8 +1,8 @@
 export type Statement = [
   {
     accountValue: number;
-    descriptionBillToPay: string;
-    billPaymentDate: string
+    description: string;
+    paymentDate: string
   }
 ];
 
@@ -25,8 +25,8 @@ export const users: User[] = [
     statement: [
       {
         accountValue: 230,
-        descriptionBillToPay: "conta de luz",
-        billPaymentDate: "",
+        description: "conta de luz",
+        paymentDate: "02/06/2022",
       }
     ]
   },
@@ -34,13 +34,13 @@ export const users: User[] = [
     id: 2,
     name: "Lorenzo",
     cpf: "222.222.222-02",
-    birthDate: "19/12/2002",
+    birthDate: "19/06/2002",
     balance: 2500,
     statement: [
       {
         accountValue: 200,
-        descriptionBillToPay: "rodízio japa",
-        billPaymentDate: "",
+        description: "rodízio japa",
+        paymentDate: "05/06/2022",
       }
     ]
   },
@@ -54,8 +54,8 @@ export const users: User[] = [
     statement: [
       {
         accountValue: 129,
-        descriptionBillToPay: "internet",
-        billPaymentDate: "",
+        description: "internet",
+        paymentDate: "04/06/2022",
       }
     ]
   },
@@ -69,8 +69,8 @@ export const users: User[] = [
     statement: [
       {
         accountValue: 250,
-        descriptionBillToPay: "fraldas",
-        billPaymentDate: "",
+        description: "viagem para Maceió",
+        paymentDate: "05/05/2022",
       }
     ]
   },
@@ -84,8 +84,8 @@ export const users: User[] = [
     statement: [
       {
         accountValue: 1200,
-        descriptionBillToPay: "curso Labenu",
-        billPaymentDate: "",
+        description: "Parcela Curso Labenu",
+        paymentDate: "03/06/2022",
       }
     ]
   },

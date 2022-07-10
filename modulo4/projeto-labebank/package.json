@@ -6,8 +6,7 @@
 
   "scripts": {
     "start": "tsc && node ./build/index.js",
-    "dev": "ts-node-dev ./src/index.ts",
-    "test": "tsc && node ./build/test.js"
+    "dev": "ts-node-dev ./src/index.ts"
   },
 
   "keywords": [],
