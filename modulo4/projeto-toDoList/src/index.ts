@@ -5,6 +5,9 @@ import { searchUsers } from "./endpoints/users";
 import { searchTasks } from "./endpoints/tasks";
 import { responsibles } from "./endpoints/responsibles";
 import { addResponsibles } from "./endpoints/addResponsibles";
+import { editNickname } from "./endpoints/editNickname";
+import { deleteTasks } from "./endpoints/deleteTasks";
+import { updateTasksStatus } from "./endpoints/updateTasksStatus";
 
 const app = express();
 
@@ -26,3 +29,9 @@ app.get("/tasks", searchTasks)
 app.get("/tasks/:taskId/users", responsibles)
 
 app.post("/tasks/:taskId/users", addResponsibles)
+
+app.put("/users/:userId", editNickname)
+
+app.put("/tasks/:taskId", updateTasksStatus)
+
+app.delete("/tasks/:taskId", deleteTasks)

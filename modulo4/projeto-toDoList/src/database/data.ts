@@ -97,10 +97,6 @@ export const responsibles = [
         taskId: "5"
     },
     {
-        userId: "2",
-        taskId: "5"
-    },
-    {
         userId: "3",
         taskId: "2"
     }

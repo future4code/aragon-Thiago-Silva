@@ -4,13 +4,13 @@ import connection from "../database/connection";
 export const addResponsibles = async (req: Request, res: Response) => {
   let errorCode = 400;
   try {
-    const taskId = req.params.taskId;
+    const taskId = req.params.taskId as string;
 
-    const userId = req.body
+    const userId = req.body.userId as string;
 
     const [tasks] = await connection.raw(`
     SELECT * FROM Tasks
-    WHERE taskId = ${taskId};
+    WHERE id = ${taskId};
     `);
 
     const checkTaskId = tasks[0];
@@ -21,8 +21,8 @@ export const addResponsibles = async (req: Request, res: Response) => {
     }
 
     const [userIds] = await connection.raw(`
-    SELECT * FROM Responsibles
-    WHERE taskId = ${userId};
+    SELECT * FROM Users
+    WHERE id = ${userId};
     `);
 
     const checkUserId = userIds[0];
@@ -32,28 +32,25 @@ export const addResponsibles = async (req: Request, res: Response) => {
       throw new Error("userId doesn't exist.");
     }
 
-    if (checkUserId && userIds.length > 1) {
-        errorCode = 404;
-        throw new Error("User can be registered only once for each selected task.");
-      }
-
-      const [addUser] = await connection.raw(`
+    const [taskResponsible] = await connection.raw(`
     SELECT * FROM Responsibles
-    WHERE taskId = ${userId};
+    WHERE taskId = ${taskId};
     `);
 
-    const newResponsible = {
-        userId: userId,
-        taskId: taskId
+    const checkTaskResponsible = taskResponsible[0]
+
+    if(checkTaskResponsible[0]) {
+      errorCode = 400
+      throw new Error("There is already a responsible to the task. Choose another one (task).")
     }
 
     await connection.raw(`
     INSERT INTO Responsibles (userId, taskId)
     VALUES ("${userId}", "${taskId}")
-    `)
+    `);
 
     res.status(200).send({
-      message: "Responsibles update successfully.",
+      message: "Responsibles updated successfully.",
     });
   } catch (error) {
     res.status(errorCode).send({ message: error.message });
