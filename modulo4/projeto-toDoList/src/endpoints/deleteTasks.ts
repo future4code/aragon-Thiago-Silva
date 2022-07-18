@@ -28,9 +28,9 @@ export const deleteTasks = async (req: Request, res: Response) => {
       WHERE id = "${taskId}";
       `)
 
-      res.status(200).send({ mensagem: "Task deleted successfully." })
+      res.status(200).send({ message: "Task deleted successfully." })
   
     } catch (error) {
-      res.status(errorCode).send({ mensagem: error.message })
+      res.status(errorCode).send({ message: error.message })
     }
   }
