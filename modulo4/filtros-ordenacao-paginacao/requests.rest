@@ -42,6 +42,7 @@ GET http://localhost:3003/products?q=celular
 POST http://localhost:3003/products
 Content-Type: application/json
 {
+    "id": "product22",
     "name": "Test product",
-    "price": 555.55
+    "price": 555
 }
