@@ -1,0 +1,27 @@
+### Ping
+GET http://localhost:3003/ping
+
+### Search perfumes
+GET http://localhost:3003/perfumes?q=animale
+
+### Create new perfume
+POST http://localhost:3003/perfumes
+Content-Type: application/json
+
+{
+    "name": "Vernizzi",
+    "brand": "ItalianBrand",
+    "price": 239.99,
+    "ml": 20
+}
+
+### Update price
+PUT http://localhost:3003/perfumes/10
+Content-Type: application/json
+
+{
+    "price": 694.00
+}
+
+### Delete perfumes
+DELETE http://localhost:3003/perfumes/1658252760749
