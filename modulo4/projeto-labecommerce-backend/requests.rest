@@ -1,0 +1,39 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### Endpoit create users
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+    "email": "will@gmail.com",
+    "password": "123456"
+}
+
+### Endpoint get users
+GET http://localhost:3003/users
+
+### Endpoint create product
+POST http://localhost:3003/products
+Content-Type: application/json
+
+{
+    "name": "carambola",
+    "price": "888"
+}
+
+### Endpoint search products
+GET http://localhost:3003/products
+
+### Endpoint register purchases
+POST http://localhost:3003/purchases
+Content-Type: application/json
+
+{
+    "user_id": "103",
+    "product_id": "205",
+    "quantity": 3
+}
+
+### Endpoint Search user purchases
+GET http://localhost:3003//users/101/purchases
