@@ -1,4 +1,4 @@
-<img width="260" src="/src/img/tecnologies.png" alt="logo labecommerce">
+<img width="260" src="./src/img/tecnologies.png" alt="logo labecommerce">
 
 ## Labecommerce-backend-project 
 
@@ -24,7 +24,7 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 - MySQL;
 - SQL.
 </br>
-<img width="296" alt="tecnologies" src="/src/img/tecnologies.png">
+<img width="296" alt="tecnologies" src="./src/img/tecnologies.png">
 
 ## Tools
 - VSCode;
