@@ -27,11 +27,10 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 To view the documentation, click here: [Postman](https://documenter.getpostman.com/view/20784974/UzXKWymv)
 
 ## Heroku's link
-To access the deployed application click on the link:  
+To access the deployed application click on the link: [Heroku](https://app-lab-ecommerce.herokuapp.com/) 
 
 ### Author
 By Thiago Vernizzi, 2022/07/23 (Aragon Team - Labenu)
-<a href="mailto:thiago.vernizzi@gmail.com" />
-
+[contact](mailto:thiago.vernizzi@gmail.com)
 
 
