@@ -17,7 +17,7 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 
 ## Tecnologies
 </br>
-<img width="400" alt="tecnologies" src="https://user-images.githubusercontent.com/95821657/180656727-96f5adff-ca89-4d9c-ad00-15877c8cd01e.png">
+<img width="400" alt="tecnologies" src="/src/img/tecnologies.png">
 
 ## Tools
 - VSCode;
