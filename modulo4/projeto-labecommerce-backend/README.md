@@ -1,4 +1,4 @@
-<img width="260" src="./img/tecnologies.png" alt="logo labecommerce">
+<img width="260" alt="logo labecommerce" src="https://user-images.githubusercontent.com/95821657/180656696-b90994cd-e3f9-4943-8cea-ec09311b3a29.png">
 
 ## Labecommerce-backend-project 
 
@@ -16,15 +16,8 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 - Register purchases;
 
 ## Tecnologies
-
-- Node.js;
-- TypeScript;
-- Express.js;
-- Knex;
-- MySQL;
-- SQL.
 </br>
-<img width="296" alt="tecnologies" src="./img/tecnologies.png">
+<img width="400" alt="tecnologies" src="https://user-images.githubusercontent.com/95821657/180656727-96f5adff-ca89-4d9c-ad00-15877c8cd01e.png">
 
 ## Tools
 - VSCode;
