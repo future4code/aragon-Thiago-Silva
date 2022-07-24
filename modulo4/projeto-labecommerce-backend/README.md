@@ -1,4 +1,4 @@
-<img width="350" alt="logo labecommerce" src="https://user-images.githubusercontent.com/95821657/180656696-b90994cd-e3f9-4943-8cea-ec09311b3a29.png">
+<img width="400" alt="logo labecommerce" src="https://user-images.githubusercontent.com/95821657/180656696-b90994cd-e3f9-4943-8cea-ec09311b3a29.png">
 
 ## Labecommerce-backend-project 
 
@@ -27,10 +27,11 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 To view the documentation, click here: [Postman](https://documenter.getpostman.com/view/20784974/UzXKWymv)
 
 ## Heroku's link
-To access the deployed application click on the link: [Heroku](https://app-lab-ecommerce.herokuapp.com/ping) 
+To access the deployed application click here: [Heroku](https://app-lab-ecommerce.herokuapp.com/ping) 
 
 ### Author
 By Thiago Vernizzi, 2022/07/23 (Aragon Team - Labenu)
-[contact](mailto:thiago.vernizzi@gmail.com)
+<br/>
+[Contact](mailto:thiago.vernizzi@gmail.com)
 
 
