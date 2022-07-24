@@ -20,7 +20,8 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 <img width="389" alt="tecnologies" src="https://user-images.githubusercontent.com/95821657/180657012-323ecb67-c980-4b56-a3ce-4131da26ecd7.png">
 
 ## Tools
-<img width="371" alt="tools" src="https://user-images.githubusercontent.com/95821657/180657526-bcfaf7c1-4982-42b7-b315-ea7abe2477dd.png">
+</br>
+<img width="289" alt="tools" src="https://user-images.githubusercontent.com/95821657/180657619-7f01d31c-7a12-4174-8eac-7abca6ba1ee4.png">
 
 ## Postman's documentation link
 To view the documentation, click here: [Postman](https://documenter.getpostman.com/view/20784974/UzXKWymv)
