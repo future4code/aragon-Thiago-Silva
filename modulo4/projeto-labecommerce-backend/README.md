@@ -4,7 +4,7 @@
 
 This is a LabEcommerce system backend update project. 
 
-<img width="300" src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/shopping-bags_1f6cd-fe0f.png" alt="a women carrying shopping bags"/>
+<img width="100" src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/shopping-bags_1f6cd-fe0f.png" alt="a women carrying shopping bags"/>
 
 The project presents 7 main endpoints API RESTFul with the following funcionalities: 
 - API Test;
@@ -21,7 +21,7 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 
 ## Tools
 </br>
-<img width="360" alt="tools" src="https://user-images.githubusercontent.com/95821657/180657619-7f01d31c-7a12-4174-8eac-7abca6ba1ee4.png">
+<img width="340" alt="tools" src="https://user-images.githubusercontent.com/95821657/180657619-7f01d31c-7a12-4174-8eac-7abca6ba1ee4.png">
 
 ## Postman's documentation link
 To view the documentation, click here: [Postman](https://documenter.getpostman.com/view/20784974/UzXKWymv)
