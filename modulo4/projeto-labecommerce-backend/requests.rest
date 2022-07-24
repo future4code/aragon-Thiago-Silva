@@ -1,39 +1,39 @@
-### Endpoint de teste
+### Endpoint - API Test
 GET http://localhost:3003/ping
 
-### Endpoit create users
+### Endpoint - Search users
+GET http://localhost:3003/users
+
+### Endpoint - Search products
+GET http://localhost:3003/products
+
+### Endpoint Search user purchases
+GET http://localhost:3003/users/101/purchases
+
+### Endpoit - Create users
 POST http://localhost:3003/users
 Content-Type: application/json
 
 {
-    "email": "will@gmail.com",
-    "password": "123456"
+    "email": "thiago@gmail.com",
+    "password": "abc123"
 }
 
-### Endpoint get users
-GET http://localhost:3003/users
-
-### Endpoint create product
+### Endpoint - Create product
 POST http://localhost:3003/products
 Content-Type: application/json
 
 {
-    "name": "carambola",
-    "price": "888"
+    "name": "MacBook Pro 16.2'' M2",
+    "price": 9999.99
 }
-
-### Endpoint search products
-GET http://localhost:3003/products
 
 ### Endpoint register purchases
 POST http://localhost:3003/purchases
 Content-Type: application/json
 
 {
-    "user_id": "103",
-    "product_id": "205",
-    "quantity": 3
+    "user_id": "user_id",
+    "product_id": "product_id",
+    "quantity": 
 }
-
-### Endpoint Search user purchases
-GET http://localhost:3003//users/101/purchases

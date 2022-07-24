@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import connection from "../database/connection";
-import {TABLE_USERS} from "../database/tableNames";
+import {TABLE_PRODUCTS, TABLE_PURCHASES, TABLE_USERS} from "../database/tableNames";
 
 export const searchUserPurchases = async (req: Request, res: Response) => {
   let errorCode: number = 400;
@@ -22,17 +22,23 @@ export const searchUserPurchases = async (req: Request, res: Response) => {
 
     const [userPurchases] = await connection.raw(`
         SELECT
-        price, total_price
-        FROM Labe_Products
-        JOIN Labe_Purchases
+        email, name, price, quantity, total_price
+        FROM Labe_Purchases
+        JOIN Labe_Products
         ON Labe_Purchases.product_id = Labe_Products.id
-        WHERE Labe_Purchases.user_id = ${id}
+        JOIN Labe_Users
+        ON Labe_Purchases.user_id = Labe_Users.id
+        WHERE Labe_Purchases.user_id = ${id};
         `)
 
-    res.status(200).send({ 
+    res
+    .status(200)
+    .send({ 
       purchases: userPurchases
     });
   } catch (error) {
-    res.status(errorCode).send({ message: error.message });
+    res
+    .status(errorCode)
+    .send({ message: error.message });
   }
 };

@@ -21,14 +21,14 @@ app.listen(process.env.PORT || 3003, () => {
 
 app.get("/ping", ping)
 
-app.post("/users", createUsers)
-
 app.get("/users", searchUsers)
-
-app.post("/products", createProducts)
 
 app.get("/products", searchProducts)
 
-app.post("/purchases", registerPurchases)
-
 app.get("/users/:userId/purchases", searchUserPurchases)
+
+app.post("/users", createUsers)
+
+app.post("/products", createProducts)
+
+app.post("/purchases", registerPurchases)
