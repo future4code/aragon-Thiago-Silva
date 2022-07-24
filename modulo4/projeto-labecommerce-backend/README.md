@@ -23,23 +23,20 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 - Knex;
 - MySQL;
 - SQL.
-![nodejs](https://user-images.githubusercontent.com/95821657/180653636-b977bfb5-3e80-497a-ad88-ac7eb0f49a0e.svg)
-![typescript](https://user-images.githubusercontent.com/95821657/180653653-60a47194-5167-4f1e-9a16-1dd68875e0e4.svg)
-![express](https://user-images.githubusercontent.com/95821657/180653663-0832f9bd-c05b-4d6d-b148-df4a1e772392.svg)
-![js](https://user-images.githubusercontent.com/95821657/180653669-bea58525-63ed-4429-9e19-9f481c82e6fd.svg)
-![knex](https://user-images.githubusercontent.com/95821657/180653682-42e5627d-4a1a-491a-ac48-1e3b886c545b.png)
-![mysql](https://user-images.githubusercontent.com/95821657/180653693-f5bf343f-be67-4931-85c3-47ec1fce7c76.png)
-![sql](https://user-images.githubusercontent.com/95821657/180653698-7836ad0a-ced2-4f66-90eb-79caee323eee.jpg)
+</br>
+<img width="296" alt="tecnologies" src="https://user-images.githubusercontent.com/95821657/180654582-f5902cd2-0958-4df0-9eac-31ad1dd4d33a.png">
 
-
-
-## Ferramentas
+## Tools
 - VSCode;
 - MySQL - Workbench;
-- Postman.
+- Postman;
+- Heroku.
 
-## Postman Documentation Link
+## Postman's Documentation link
 To view the documentation, click here: [Postman](https://documenter.getpostman.com/view/20784974/UzXKWymv)
+
+## Heroku's link
+To access the deployed application click on the link:  
 
 ### Author
 By Thiago Vernizzi, 2022/07/23 (Aragon Team - Labenu)
