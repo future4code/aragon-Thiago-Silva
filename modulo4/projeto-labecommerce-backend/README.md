@@ -1,5 +1,6 @@
-# Labecommerce-backend-project <img width="196" alt="image" src="https://user-images.githubusercontent.com/95821657/180652462-388dde37-f182-4097-b1b3-955039926a95.png">
+<img width="196" alt="image" src="https://user-images.githubusercontent.com/95821657/180652462-388dde37-f182-4097-b1b3-955039926a95.png">
 
+# Labecommerce-backend-project 
 
 This is a LabEcommerce system backend update project. 
 
