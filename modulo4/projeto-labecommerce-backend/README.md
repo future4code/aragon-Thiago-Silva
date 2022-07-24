@@ -1,10 +1,10 @@
-<img width="196" alt="image" src="https://user-images.githubusercontent.com/95821657/180652462-388dde37-f182-4097-b1b3-955039926a95.png"><img width="196" alt="image" src="https://user-images.githubusercontent.com/95821657/180652462-388dde37-f182-4097-b1b3-955039926a95.png">
+<img width="196" alt="image" src="https://user-images.githubusercontent.com/95821657/180652462-388dde37-f182-4097-b1b3-955039926a95.png">
 
 # Labecommerce-backend-project 
 
 This is a LabEcommerce system backend update project. 
 
-<img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/shopping-bags_1f6cd-fe0f.png" alt="a women carrying shopping bags"/>
+<img width="20px" src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/shopping-bags_1f6cd-fe0f.png" alt="a women carrying shopping bags"/>
 
 The project presents 7 main endpoints API RESTFul with the following funcionalities: 
 - API Test;
