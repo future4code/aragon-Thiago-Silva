@@ -17,7 +17,7 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 
 ## Tecnologies
 </br>
-<img width="400" alt="tecnologies" src="/src/img/tecnologies.png">
+<img width="389" alt="tecnologies" src="https://user-images.githubusercontent.com/95821657/180657012-323ecb67-c980-4b56-a3ce-4131da26ecd7.png">
 
 ## Tools
 - VSCode;
@@ -25,7 +25,7 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 - Postman;
 - Heroku.
 
-## Postman's Documentation link
+## Postman's documentation link
 To view the documentation, click here: [Postman](https://documenter.getpostman.com/view/20784974/UzXKWymv)
 
 ## Heroku's link
@@ -33,6 +33,7 @@ To access the deployed application click on the link:
 
 ### Author
 By Thiago Vernizzi, 2022/07/23 (Aragon Team - Labenu)
+<a href="mailto:thiago.vernizzi@gmail.com" />
 
 
 
