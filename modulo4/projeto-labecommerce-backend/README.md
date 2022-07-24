@@ -7,7 +7,7 @@ This is a LabEcommerce system backend update project.
 <img width="100vw" src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/shopping-bags_1f6cd-fe0f.png" alt="a women carrying shopping bags"/>
 
 The project presents 7 main endpoints API RESTFul with the following funcionalities: 
-[x] API Test;
+-[x] API Test;
 [x] Search users by id or name;
 [x] Search products by id or name;
 [x] Search user purchases by user_id;
