@@ -37,5 +37,5 @@ To access the deployed application click here: [Heroku](https://app-lab-ecommerc
 By Thiago Vernizzi, 2022/07/23 (Aragon Team - Labenu)
 <br/>
 [Contact](mailto:thiago.vernizzi@gmail.com)
-
+https://www.linkedin.com/in/thiagovernizzi/
 
