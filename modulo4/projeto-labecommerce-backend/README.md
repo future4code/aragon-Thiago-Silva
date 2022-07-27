@@ -15,6 +15,10 @@ The project presents 7 main endpoints API RESTFul with the following funcionalit
 - Create products;
 - Register purchases;
 
+## Installing the dependencies and running application
+- npm install: Installs all dependencies listed in package.json
+- npm run dev: Run application
+
 ## Tecnologies
 </br>
 <img width="350" alt="tecnologies" src="https://user-images.githubusercontent.com/95821657/180657012-323ecb67-c980-4b56-a3ce-4131da26ecd7.png">
