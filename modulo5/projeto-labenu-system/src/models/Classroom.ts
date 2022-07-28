@@ -1,32 +1,16 @@
-export enum MODULE {
-    MODULE0 = "module 0",
-    MODULE1 = "module 1",
-    MODULE2 = "module 2",
-    MODULE3 = "module 3",
-    MODULE4 = "module 4",
-    MODULE5 = "module 5",
-    MODULE6 = "module 6"
-}
-
-export type TClassroom = {
+export interface IClassroomDB {
     id: string,
     name: string,
-    studentId: string[],
-    module: MODULE
+    module: string
 }
 
-export class User {
+export class Classroom {
     constructor(
         private id: string,
         private name: string,
-        private studentsId: string[],
-        private module: string
-    ) {
-        this.id = id
-        this.name = name
-        this.studentsId = studentsId
-        this.module = module
-    }
+        private students: string[],
+        private module: number
+    ) {}
 
     public getId() {
         return this.id
@@ -36,8 +20,8 @@ export class User {
         return this.name
     }
 
-    public getStudentsId() {
-        return this.studentsId
+    public getStudents() {
+        return this.students
     }
 
     public getModule() {
@@ -52,11 +36,11 @@ export class User {
         this.name = newName
     }
 
-    public setStudentsId(newStudentsId: string[]) {
-        this.studentsId = newStudentsId
+    public setStudents(newStudents: string[]) {
+        this.students = [...newStudents]
     }
 
-    public setModule(newModule: string) {
+    public setModule(newModule: number) {
         this.module = newModule
     }
 }

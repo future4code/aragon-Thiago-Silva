@@ -1,28 +1,27 @@
-export type TStudent = {
+export interface IStudentDB {
     id: string,
     name: string,
     email: string,
-    birthdate: string,
-    classsroomId: null | string
-    hobbiesId: string
+    birthdate: Date,
+    classroom_id: string | null
 }
-
-export class Product {
+export interface IHobbiesDB {
+    id: string,
+    title: string
+}
+export interface IStudentsHobbiesDB {
+    student_id: string,
+    hobby_id: string
+}
+export class Student {
     constructor(
         private id: string,
         private name: string,
         private email: string,
-        private birthdate: string,
-        private classroomId: null | string,
-        private hobbiesId: string
-    ) {
-        this.id = id
-        this.name = name
-        this.email = email
-        this.birthdate = birthdate
-        this.classroomId = classroomId
-        this.hobbiesId = hobbiesId
-    }
+        private birthdate: Date,
+        private classroomId: string | null,
+        private hobbies: string[]
+    ) {}
 
     public getId() {
         return this.id
@@ -35,7 +34,7 @@ export class Product {
     public getEmail() {
         return this.email
     }
-    
+
     public getBirthdate() {
         return this.birthdate
     }
@@ -44,8 +43,8 @@ export class Product {
         return this.classroomId
     }
 
-    public getHobbiesId() {
-        return this.hobbiesId
+    public getHobbies() {
+        return this.hobbies
     }
 
     public setId(newId: string) {
@@ -56,19 +55,15 @@ export class Product {
         this.name = newName
     }
 
-    public setEmail(newEmail: string) {
-        this.email = newEmail
-    }
-
-    public setBirthdate(newBirthdate: string) {
+    public setBirthdate(newBirthdate: Date) {
         this.birthdate = newBirthdate
     }
 
-    public setClassroomId(newClassroomId: string) {
+    public setClassroomId(newClassroomId: string | null) {
         this.classroomId = newClassroomId
     }
 
-    public setHobbiesId(newHobbiesId: string) {
-        this.hobbiesId = newHobbiesId
+    public setHobbies(newHobbies: string[]) {
+        this.hobbies = [...newHobbies]
     }
 }

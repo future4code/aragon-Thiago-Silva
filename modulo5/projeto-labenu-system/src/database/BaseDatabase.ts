@@ -15,29 +15,4 @@
             multipleStatements: true
          },
       })
-
-      protected abstract TABLE_NAME: string
-
-      protected async getAll() {
-         const result = await BaseDatabase
-            .connection(this.TABLE_NAME)
-            .select()
-
-         return result
-      }
-
-      protected async create(item: any) {
-         await BaseDatabase
-            .connection(this.TABLE_NAME)
-            .insert(item)
-      }
-
-      protected async getItemById(id: string) {
-         const result = await BaseDatabase
-            .connection(this.TABLE_NAME)
-            .select()
-            .where({ id: id })
-
-         return result
-   }
    }
