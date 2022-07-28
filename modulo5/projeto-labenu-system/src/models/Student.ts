@@ -13,14 +13,14 @@ export interface IStudentsHobbiesDB {
     student_id: string,
     hobby_id: string
 }
+
 export class Student {
     constructor(
         private id: string,
         private name: string,
         private email: string,
         private birthdate: Date,
-        private classroomId: string | null,
-        private hobbies: string[]
+        private classroomId: string | null
     ) {}
 
     public getId() {
@@ -43,10 +43,6 @@ export class Student {
         return this.classroomId
     }
 
-    public getHobbies() {
-        return this.hobbies
-    }
-
     public setId(newId: string) {
         this.id = newId
     }
@@ -61,9 +57,5 @@ export class Student {
 
     public setClassroomId(newClassroomId: string | null) {
         this.classroomId = newClassroomId
-    }
-
-    public setHobbies(newHobbies: string[]) {
-        this.hobbies = [...newHobbies]
     }
 }

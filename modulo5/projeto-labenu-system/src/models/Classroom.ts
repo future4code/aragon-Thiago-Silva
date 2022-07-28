@@ -8,8 +8,7 @@ export class Classroom {
     constructor(
         private id: string,
         private name: string,
-        private students: string[],
-        private module: number
+        private module: string
     ) {}
 
     public getId() {
@@ -18,10 +17,6 @@ export class Classroom {
 
     public getName() {
         return this.name
-    }
-
-    public getStudents() {
-        return this.students
     }
 
     public getModule() {
@@ -36,11 +31,7 @@ export class Classroom {
         this.name = newName
     }
 
-    public setStudents(newStudents: string[]) {
-        this.students = [...newStudents]
-    }
-
-    public setModule(newModule: number) {
+    public setModule(newModule: string) {
         this.module = newModule
     }
 }

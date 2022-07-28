@@ -1,5 +1,28 @@
-### Endpoint de teste
+### Endpoint - API Test
 GET http://localhost:3003/ping
 
-### Exercício 0
+### Endpoint - Get all classrooms
 GET http://localhost:3003/classrooms
+
+### Endpoint - Get active classrooms
+GET http://localhost:3003/classrooms/active
+
+### Endpoint - Create classrooms
+POST http://localhost:3003/classrooms
+Content-Type: application/json
+
+{
+    "name": "Test Classroom",
+    "module": "0"
+}
+
+### Endpoint - Create students
+POST http://localhost:3003/students
+Content-Type: application/json
+
+{
+    "name": "Test Student",
+    "email": "test@email.com",
+    "birthdate": "1990/10/01",
+    "classroom_id": null
+}

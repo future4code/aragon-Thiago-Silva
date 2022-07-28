@@ -15,4 +15,4 @@
             multipleStatements: true
          },
       })
-   }
+}
