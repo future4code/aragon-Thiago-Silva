@@ -15,4 +15,6 @@
             multipleStatements: true
          },
       })
+
+      protected abstract TABLE_NAME: string
 }

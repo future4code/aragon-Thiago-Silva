@@ -3,6 +3,7 @@ import { ClassroomDatabase } from "../ClassroomDatabase"
 import { StudentsDatabase } from "../StudentsDatabase"
 import { classroom, hobbies, students, studentsHobbies } from "./data"
 class Migrations extends BaseDatabase {
+    public TABLE_NAME: ""
 
     public async execute() {
         try {

@@ -51,28 +51,23 @@ export class ClassroomController {
     }
   }
 
-  // public async updateModule(req: Request, res: Response) {
-  //   let errorCode = 400;
-  //   try {
-  //     const id = req.params.id
-  //     const module = req.body.module;
+  public async updateModule(req: Request, res: Response) {
+    let errorCode = 400;
+    try {
+      const id = req.params.classroomId
+      const module = req.body.module;
 
-  //     if (!module) {
-  //       throw new Error("Error: missing parameters.");
-  //     }
-
-  //    const newModule = {
-  //     id: id,
+      if (!module) {
+        throw new Error("Error: missing parameters.");
+      }
       
-  //    }
-      
-  //     const classroomDatabase = new ClassroomDatabase();
-  //     await classroomDatabase.create(classroom);
+      const classroomDatabase = new ClassroomDatabase();
+      await classroomDatabase.updateModule(id, module);
 
-  //     res.status(200).send({ classroom: classroom });
-  //   } catch (error) {
-  //     res.status(errorCode).send({ message: error.message });
-  //   }
-  // }
+      res.status(200).send({ message: "Module updated successfully." });
+    } catch (error) {
+      res.status(errorCode).send({ message: error.message });
+    }
+  }
 
 }

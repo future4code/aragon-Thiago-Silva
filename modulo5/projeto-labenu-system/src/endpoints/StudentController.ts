@@ -8,7 +8,7 @@ export class StudentController {
         try {
           const { name, email, birthdate, classroom_id } = req.body;
     
-          if (!name || !email || !birthdate || !classroom_id) {
+          if (!name || !email || !birthdate ) {
             throw new Error("Error: missing parameters.");
           }
     

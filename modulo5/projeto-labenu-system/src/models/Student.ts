@@ -20,7 +20,7 @@ export class Student {
         private name: string,
         private email: string,
         private birthdate: Date,
-        private classroomId: string | null
+        private classroom_id: string | null
     ) {}
 
     public getId() {
@@ -40,7 +40,7 @@ export class Student {
     }
 
     public getClassroomId() {
-        return this.classroomId
+        return this.classroom_id
     }
 
     public setId(newId: string) {
@@ -55,7 +55,7 @@ export class Student {
         this.birthdate = newBirthdate
     }
 
-    public setClassroomId(newClassroomId: string | null) {
-        this.classroomId = newClassroomId
+    public setClassroomId(newClassroom_id: string | null) {
+        this.classroom_id = newClassroom_id
     }
 }

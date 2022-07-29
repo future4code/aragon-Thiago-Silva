@@ -24,5 +24,13 @@ Content-Type: application/json
     "name": "Test Student",
     "email": "test@email.com",
     "birthdate": "1990/10/01",
-    "classroom_id": null
+    "classroom_id":  null
+}
+
+### Endpoint - Update Module Classroom
+PUT http://localhost:3003/classrooms/101/module
+Content-Type: application/json
+
+{
+    "module": "0"
 }
