@@ -15,17 +15,55 @@ export class StudentsDatabase extends BaseDatabase {
     return result;
   }
 
-  public async getStudentByname(q:string){
-    const result = await BaseDatabase
-    .connection(StudentsDatabase.TABLE_STUDENTS)
-    .where("name","LIKE",`%${q}%`)
+  public async getStudentByName(search: string) {
+    const result = await BaseDatabase.connection(
+      StudentsDatabase.TABLE_STUDENTS
+    ).where("name", "LIKE", `%${search}%`);
 
-    return result
-}
+    return result;
+  }
+
+  public async getStudentsById(id: string) {
+    const result = await BaseDatabase.connection(
+      StudentsDatabase.TABLE_STUDENTS
+    )
+      .select("*")
+      .where("id", "=", `${id}`);
+    return result;
+  }
+
+  public async getStudentsByClassroom(classroom_id: string) {
+    const result = await BaseDatabase.connection(
+      StudentsDatabase.TABLE_STUDENTS
+    )
+      .select()
+      .where("classroom_id", "=", `${classroom_id}`);
+    return result;
+  }
 
   public async createStudent(student: Student) {
-    await BaseDatabase
+    await BaseDatabase.connection(StudentsDatabase.TABLE_STUDENTS).insert(
+      student
+    );
+  }
+
+  public async getStudentEmail(email:string){
+    const findEmail = await BaseDatabase
     .connection(StudentsDatabase.TABLE_STUDENTS)
-    .insert(student);
+    .select()
+    .where("email","=",`${email}`)
+    return findEmail
+}
+
+  public async updateClassroom(id: string, newClassroom_id: string) {
+    await BaseDatabase.connection(StudentsDatabase.TABLE_STUDENTS)
+      .update({ classroom_id: newClassroom_id })
+      .where({ id: id });
+  }
+
+  public async deleteStudent(studentId: string) {
+    await BaseDatabase.connection(StudentsDatabase.TABLE_STUDENTS)
+      .delete("*")
+      .where({ id: studentId });
   }
 }
