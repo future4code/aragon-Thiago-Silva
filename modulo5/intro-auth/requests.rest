@@ -1,0 +1,46 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+
+### Endpoint de signup
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+    "nickname": "ThiagoDev",
+    "email": "thiago@gmail.com",
+    "password": "thiago@123"
+}
+
+### Endpoint login
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+    "email": "thiago@gmail.com",
+    "password": "thiago@123"
+}
+
+### Endpoit getAllUsers or by nickname
+GET http://localhost:3003/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI1YzIzMGU3LTI2ZTAtNDU3MS05OTVjLTUyYzYyMzUzMzBkMyIsImlhdCI6MTY1OTM5NzYzNCwiZXhwIjoxNjU5NDg0MDM0fQ.HYjCJ_gNuc-mtSlQnjqcs0K-oB1ClXT-llnAEixmS14
+
+### Endpoint editUser
+PUT http://localhost:3003/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI1YzIzMGU3LTI2ZTAtNDU3MS05OTVjLTUyYzYyMzUzMzBkMyIsImlhdCI6MTY1OTM5NzYzNCwiZXhwIjoxNjU5NDg0MDM0fQ.HYjCJ_gNuc-mtSlQnjqcs0K-oB1ClXT-llnAEixmS14
+Content-Type: application/json
+
+{
+    "nickname":"vernizzi",
+    "email": "vernizzi@gmail.com",
+    "password": "vernizzi@123"
+}
+
+### Endpoint DeleteUser
+DELETE http://localhost:3003/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI1YzIzMGU3LTI2ZTAtNDU3MS05OTVjLTUyYzYyMzUzMzBkMyIsImlhdCI6MTY1OTM5NzYzNCwiZXhwIjoxNjU5NDg0MDM0fQ.HYjCJ_gNuc-mtSlQnjqcs0K-oB1ClXT-llnAEixmS14
+Content-Type: application/json
+
+{
+    "id": "7079b8e4-95cd-48aa-82a9-77454e94b789"
+}
