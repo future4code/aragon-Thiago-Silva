@@ -1,0 +1,52 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### Signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "nickname": "vernizzi",
+    "email": "thiago.vernizzi@gmail.com",
+    "password": "vernizzi123"
+}
+
+### Login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "astrodev@gmail.com",
+    "password": "bananinha"
+}
+
+### Create recipe
+POST http://localhost:3003/recipes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTU1ODA2OSwiZXhwIjoxNjU5NjQ0NDY5fQ.IIN6AIpnRLjLoZlA1AQ1Fz1Euw8T79phqOFe5spV0uQ
+Content-Type: application/json
+
+{
+    "title": "Panqueca americana",
+    "description": "Panqueca americana com mel"
+}
+
+### Get all recipes
+GET http://localhost:3003/recipes/?q=panq
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTU1ODA2OSwiZXhwIjoxNjU5NjQ0NDY5fQ.IIN6AIpnRLjLoZlA1AQ1Fz1Euw8T79phqOFe5spV0uQ
+
+### Edit recipe
+PUT http://localhost:3003/recipes/103
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTU1ODA2OSwiZXhwIjoxNjU5NjQ0NDY5fQ.IIN6AIpnRLjLoZlA1AQ1Fz1Euw8T79phqOFe5spV0uQ
+Content-Type: application/json
+
+{
+    "title": "Kibe vegano com alho poró"
+}
+
+### Delete recipe
+DELETE http://localhost:3003/recipes/c238a763-2100-47bc-a1bf-e8a6acf89614
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTU1ODA2OSwiZXhwIjoxNjU5NjQ0NDY5fQ.IIN6AIpnRLjLoZlA1AQ1Fz1Euw8T79phqOFe5spV0uQ
+
+### Delete user
+DELETE http://localhost:3003/users/:id
+Authorization: 
