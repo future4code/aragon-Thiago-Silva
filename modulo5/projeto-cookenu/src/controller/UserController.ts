@@ -150,18 +150,14 @@ export class UserController {
         let errorCode = 400
             try {
                 const token = req.headers.authorization
-                const search = req.query.search
+                const search = req.query.q as string
     
                 const authenticator = new Authenticator()
                 const payload = authenticator.getTokenPayload(token)
     
                 if (!payload) {
                     errorCode = 401
-                    throw new Error("Token faltando ou inválido")
-                }
-
-                if (typeof search !== "string") {
-                    throw new Error("Parâmetro 'search' deve ser uma string")
+                    throw new Error("Token faltando")
                 }
     
                 const userDatabase = new UserDatabase()
@@ -199,4 +195,46 @@ export class UserController {
         }
     }
 
+    public deleteUserDB = async (req: Request, res: Response) => {
+        let errorCode = 400
+        try {
+            const token = req.headers.authorization
+            const id = req.params.id
+
+            if (!token) {
+                errorCode = 422
+                throw new Error("Token ausente")
+            }
+
+            const authenticator = new Authenticator()
+            const payload = authenticator.getTokenPayload(token)
+
+            if (!payload) {
+                errorCode = 401
+                throw new Error("Token inválido")
+            }
+
+            const userDataBase = new UserDatabase()
+            const userDB = await userDataBase.findById(id)
+
+            if (!userDB) {
+                errorCode = 404
+                throw new Error("Id do usuario a ser deletado inválido.")
+            }
+
+            if (payload.role === USER_ROLES.NORMAL) {
+                if (payload.id !== userDB.id) {
+                    errorCode = 403
+                    throw new Error("Somente admins podem deletar usuários, mas não podem deletar a si mesmos.")
+                }
+            }
+
+            await userDataBase.deleteUserDB(id)
+
+            res.status(200).send({ message: "Usuario deletado com sucesso!" })
+
+        } catch (error) {
+            res.status(errorCode).send({ message: error.message })
+        }
+    }
 }

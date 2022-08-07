@@ -52,19 +52,20 @@ export class UserDatabase extends BaseDatabase {
 
         return result
     }
-    
-    public getAllUser = async (user: User) => {
-        const userDB: IUserDB = {
-            id: user.getId(),
-            nickname: user.getNickname(),
-            email: user.getEmail(),
-            password: user.getPassword(),
-            role: user.getRole()
-        }
-        const result = await BaseDatabase
+
+public findById = async (id: string) => {
+    const result: IUserDB[] = await BaseDatabase
         .connection(UserDatabase.TABLE_USERS)
         .select()
+        .where({ id })
 
-        return result
+    return result[0]
+}
+
+public deleteUserDB = async (id: string) => {
+    await BaseDatabase
+        .connection(UserDatabase.TABLE_USERS)
+        .delete()
+        .where({ id })
 }
 }
