@@ -1,0 +1,63 @@
+### Endpoint - API Test
+GET http://localhost:3003/ping
+
+### Endpoint - Get all classrooms
+GET http://localhost:3003/classrooms
+
+### Endpoint - Get classroom by id
+GET http://localhost:3003/classrooms/101
+
+### Endpoint - Get active classrooms
+GET http://localhost:3003/classrooms/active
+
+### Endpoint - Get all students
+GET http://localhost:3003/students
+
+### Endpoint - Get students by name
+GET http://localhost:3003/students?q=luca
+
+### Endpoint - Get students by classroom
+GET http://localhost:3003/students/102
+
+### Endpoint - Create classrooms
+POST http://localhost:3003/classrooms
+Content-Type: application/json
+
+{
+    "name": "Test New Classroom",
+    "module": "0"
+}
+
+### Endpoint - Create students
+POST http://localhost:3003/students
+Content-Type: application/json
+
+{
+    "name": "Test Student",
+    "email": "teststudent@gmail.com",
+    "birthdate": "1990/10/01",
+    "classroom_id":  null
+}
+
+### Endpoint - Update Module Classroom
+PUT http://localhost:3003/classrooms/101/module
+Content-Type: application/json
+
+{
+    "module": "0"
+}
+
+### Endpoint - Update Student Classroom
+PUT http://localhost:3003/students/210/classroomId
+Content-Type: application/json
+
+{
+    "classroom_id": "103"
+}
+
+
+### Endpoint - Delete classroom
+DELETE http://localhost:3003/classrooms/:classroomId
+
+### Endpoint - Delete student
+DELETE http://localhost:3003/students/1659320813663
