@@ -1,0 +1,42 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### 1) Signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "Lorenzo",
+    "email": "lorenzo@gmail.com",
+    "password": "abc123"
+}
+
+### 2) Login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+   "email": "lorenzo@gmail.com",
+    "password": "abc123"
+}
+
+### 3) Create post
+POST http://localhost:3003/posts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0MzljZDUzLTYxNDQtNDAyZS04ZjNjLTBhNDk0OWVkN2YyYSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAyNDQ1MjUsImV4cCI6MTY2MDMzMDkyNX0.RvNIhlskoOws1GXFmrz6_-NEj2L_oZHp_uSgeBi8PVA
+Content-Type: application/json
+
+{
+    "content": "Lorenzo 2"
+}
+
+### 4) Get posts
+GET http://localhost:3003/posts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDIzNzc5NywiZXhwIjoxNjYwMzI0MTk3fQ.vsrlER0BF22HMq3zKfcVDuIn5gTAx3OZXrVJcULALho
+
+### 5) Delete post
+DELETE http://localhost:3003/posts/92c68727-bfe1-4d0a-94c0-c452f252a5c9
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0MzljZDUzLTYxNDQtNDAyZS04ZjNjLTBhNDk0OWVkN2YyYSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAyNDI4MDQsImV4cCI6MTY2MDMyOTIwNH0.vOlr9vlejkcD0lEJRSYoI1Sr1Rjv7feXsa1zTgYHC5w
+
+### 6) Get Users
+GET http://localhost:3003/users?q=lore
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM0MzljZDUzLTYxNDQtNDAyZS04ZjNjLTBhNDk0OWVkN2YyYSIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjAyNDI4MDQsImV4cCI6MTY2MDMyOTIwNH0.vOlr9vlejkcD0lEJRSYoI1Sr1Rjv7feXsa1zTgYHC5w
