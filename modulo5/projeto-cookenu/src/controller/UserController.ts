@@ -191,7 +191,7 @@ export class UserController {
                 res.status(200).send({ users: result })
             
         } catch (error) {
-            res.status(200).send({ message: error.message })
+            res.status(errorCode).send({ message: error.message })
         }
     }
 
