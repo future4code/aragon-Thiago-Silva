@@ -2,6 +2,9 @@ import { PostDatabase } from "../database/PostDatabase";
 import {
   ICreatePostInputDTO,
   IDeletePostInputDTO,
+  IDislikeInputDBDTO,
+  IDislikeInputDTO,
+  IDislikeOutputDTO,
   IGetPostsDBDTO,
   IGetPostsInputDTO,
   IGetPostsOutputDTO,
@@ -170,14 +173,14 @@ export class PostBusiness {
     return response;
   };
 
-  public dislikePost = async (input: ILikePostDTO) => {
+  public dislikePost = async (input: IDislikeInputDTO) => {
     const token = input.token;
     const post_id = input.post_id as string;
 
     const payload = this.authenticator.getTokenPayload(token);
     const user_id = payload.id;
 
-    const dislikeDB: ILikeDBOutputDTO = {
+    const dislikeDB: IDislikeOutputDTO = {
       post_id,
       user_id,
     };
