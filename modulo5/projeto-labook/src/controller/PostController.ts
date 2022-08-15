@@ -1,6 +1,12 @@
 import { Request, Response } from "express";
 import { PostBusiness } from "../business/PostBusiness";
-import { ICreatePostInputDTO, IDeletePostInputDTO, IGetPostsInputDTO, ILikePostDTO } from "../models/Post";
+import {
+  ICreatePostInputDTO,
+  IDeletePostInputDTO,
+  IDislikeInputDTO,
+  IGetPostsInputDTO,
+  ILikePostDTO,
+} from "../models/Post";
 
 export class PostController {
   constructor(private postBusiness: PostBusiness) {}
@@ -8,11 +14,11 @@ export class PostController {
   public createPost = async (req: Request, res: Response) => {
     try {
       const token = req.headers.authorization as string;
-      const {content} = req.body;
+      const { content } = req.body;
 
       const input: ICreatePostInputDTO = {
         content,
-        token
+        token,
       };
 
       const response = await this.postBusiness.createPost(input);
@@ -59,16 +65,31 @@ export class PostController {
 
   public likePost = async (req: Request, res: Response) => {
     try {
-        const input:ILikePostDTO = {
-            token: req.headers.authorization,
-            post_id:req.params.post_id
-        }
+      const input: ILikePostDTO = {
+        token: req.headers.authorization,
+        post_id: req.params.post_id,
+      };
 
-        const response = await this.postBusiness.likePost(input)
+      const response = await this.postBusiness.likePost(input);
 
-        res.status(200).send(response)
+      res.status(200).send(response);
     } catch (error) {
-        res.status(400).send({ message: error.message })
+      res.status(400).send({ message: error.message });
     }
-}
+  };
+
+  public dislikePost = async (req: Request, res: Response) => {
+    try {
+      const input: IDislikeInputDTO = {
+        token: req.headers.authorization,
+        post_id: req.params.id,
+      };
+
+      const response = await this.postBusiness.dislikePost(input);
+
+      res.status(200).send(response);
+    } catch (error) {
+      res.status(400).send({ message: error.message });
+    }
+  };
 }

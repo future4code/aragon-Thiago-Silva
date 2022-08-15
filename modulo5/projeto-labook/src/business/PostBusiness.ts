@@ -6,7 +6,9 @@ import {
   IGetPostsInputDTO,
   IGetPostsOutputDTO,
   IGetPostsPost,
+  ILikeDBOutputDTO,
   ILikePostDTO,
+  ILikePostInputDTO,
   Post,
 } from "../models/Post";
 import { USER_ROLES } from "../models/User";
@@ -33,11 +35,7 @@ export class PostBusiness {
 
     const user_id = userToken.id;
 
-    const postDB = new Post(
-      id, 
-      content, 
-      user_id
-      );
+    const postDB = new Post(id, content, user_id);
 
     await this.postDatabase.createPost(postDB);
 
@@ -76,12 +74,18 @@ export class PostBusiness {
     const postsDB = await this.postDatabase.getPosts(getPostsInputDB);
 
     const posts = postsDB.map((postDB) => {
-      const post = new Post(postDB.id, postDB.content, postDB.user_id);
+      const post = new Post(
+        postDB.id,
+        postDB.content,
+        postDB.user_id,
+        postDB.likes
+      );
 
       const postResponse: IGetPostsPost = {
         id: post.getId(),
         content: post.getContent(),
         user_id: post.getUserId(),
+        likes: post.getLikes(),
       };
 
       return postResponse;
@@ -102,17 +106,17 @@ export class PostBusiness {
 
     if (!payload) {
       throw new Error("Token inválido ou faltando");
-    }    
-  
+    }
+
     const postDB = await this.postDatabase.findById(idToDelete);
 
     if (!postDB) {
       throw new Error("Post a ser deletado não encontrado");
     }
 
-    const isUserAdmin = payload.role === USER_ROLES.ADMIN
+    const isUserAdmin = payload.role === USER_ROLES.ADMIN;
 
-    const isCreatorUser = payload.id === postDB.user_id
+    const isCreatorUser = payload.id === postDB.user_id;
 
     if (payload.role !== USER_ROLES.ADMIN) {
       throw new Error("Apenas admins podem deletar qualquer post");
@@ -127,10 +131,62 @@ export class PostBusiness {
     return response;
   };
 
-  likePost = async(input: any)=> {
-    const token = input.token
-    const post_id = input.post_id as string
-    const payload = this.authenticator.getTokenPayload(token)
-    const likeDB = await this.postDatabase.likePost(post_id)
-}
+  public likePost = async (input: ILikePostDTO) => {
+    const token = input.token;
+    const post_id = input.post_id as string;
+
+    const payload = this.authenticator.getTokenPayload(token);
+    const user_id = payload.id;
+
+    if (!payload) {
+      throw new Error("Token inválido ou faltando");
+    }
+
+    const findById = await this.postDatabase.findById(post_id);
+
+    if (!findById) {
+      throw new Error("Post inexistente");
+    }
+
+    // const findLikedPost = await this.postDatabase.findLikedPost(post_id,user_id)
+
+    // if(findLikedPost){
+    //     throw new Error("Usuario já curtiu este post");
+
+    // }
+
+    const inputDB: ILikeDBOutputDTO = {
+      post_id,
+      user_id: payload.id,
+    };
+
+    const likeDB = await this.postDatabase.likePost(inputDB);
+
+    const response = {
+      message: "Post curtido",
+      likeDB,
+    };
+
+    return response;
+  };
+
+  public dislikePost = async (input: ILikePostDTO) => {
+    const token = input.token;
+    const post_id = input.post_id as string;
+
+    const payload = this.authenticator.getTokenPayload(token);
+    const user_id = payload.id;
+
+    const dislikeDB: ILikeDBOutputDTO = {
+      post_id,
+      user_id,
+    };
+    await this.postDatabase.dislikePost(dislikeDB);
+
+    const response = {
+      message: "Post descurtido com sucesso",
+    };
+
+    return response;
+  };
 }
