@@ -2,7 +2,6 @@ import { PostDatabase } from "../database/PostDatabase";
 import {
   ICreatePostInputDTO,
   IDeletePostInputDTO,
-  IDislikeInputDBDTO,
   IDislikeInputDTO,
   IDislikeOutputDTO,
   IGetPostsDBDTO,
@@ -11,7 +10,6 @@ import {
   IGetPostsPost,
   ILikeDBOutputDTO,
   ILikePostDTO,
-  ILikePostInputDTO,
   Post,
 } from "../models/Post";
 import { USER_ROLES } from "../models/User";

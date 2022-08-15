@@ -1,10 +1,7 @@
 import {
-  IDislikeInputDBDTO,
-  IDislikeInputDTO,
   IDislikeOutputDTO,
   IGetPostsDBDTO,
   ILikeDBOutputDTO,
-  ILikePostInputDTO,
   IPostDB,
   Post,
 } from "../models/Post";
