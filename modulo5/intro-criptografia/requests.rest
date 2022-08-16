@@ -1,0 +1,38 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+
+### Signup
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+    "nickname": "thiagodev",
+    "email": "thiago@gmail.com",
+    "password": "thiago123",
+}
+
+### Login
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+    "email": "thiago@gmail.com",
+    "password": "thiago123"
+}
+
+### Get all users (protected)
+GET http://localhost:3003/users?search=
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4OWI4ZWFjLTQzZmYtNDA2My1hMTBhLWU5NTMxZTkxMmU2YyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk0NjU5OTQsImV4cCI6MTY1OTU1MjM5NH0.IA1CS8eZ-oTnmWBNEqp2tXFTjLzxrkl4Kd651ZM954A
+
+### Edit user (protected)
+PUT http://localhost:3003/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4OWI4ZWFjLTQzZmYtNDA2My1hMTBhLWU5NTMxZTkxMmU2YyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk0NjU5OTQsImV4cCI6MTY1OTU1MjM5NH0.IA1CS8eZ-oTnmWBNEqp2tXFTjLzxrkl4Kd651ZM954AContent-Type: application/json
+
+{
+    "nickname": "thi"
+}
+
+### Delete user (protected)
+DELETE http://localhost:3003/users/7079b8e4-95cd-48aa-82a9-77454e94b789
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM4OWI4ZWFjLTQzZmYtNDA2My1hMTBhLWU5NTMxZTkxMmU2YyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTQ2NjcwMywiZXhwIjoxNjU5NTUzMTAzfQ.AC2m-5uWSwhrZPWwfLkyCclazbJzKcHbDDjLIeb2_lw
