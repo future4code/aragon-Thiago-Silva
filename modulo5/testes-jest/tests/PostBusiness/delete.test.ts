@@ -3,7 +3,6 @@ import { IdGeneratorMock } from "../mocks/services/IdGeneratorMock"
 import { AuthenticatorMock } from "../mocks/services/AuthenticatorMock"
 import { PostDatabaseMock } from "../mocks/PostDatabaseMock"
 import { IDeletePostInputDTO } from "../../src/models/Post"
-import { response } from "express"
 import { PostDatabase } from "../../src/database/PostDatabase"
 import { HashManagerMock } from "../mocks/services/HashManagerMock"
 
