@@ -1,6 +1,6 @@
 # Projeto Labook
+<img width="164" alt="labook logo" src="https://user-images.githubusercontent.com/95821657/185001147-be2b06e9-94d0-4d6c-829c-c8bd60473228.png">
 
-<img src="/src/img/labook logo.png" alt="logo Labook"/>
 
 O Labook é uma rede social com o objetivo de promover a conexão e interação entre seus mais diversos usuários, com as seguintes funcionalidades básicas:
 
