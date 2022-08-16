@@ -1,0 +1,41 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### 1) Signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "Beltrano",
+    "email": "beltrano@gmail.com",
+    "password": "abc123"
+}
+
+### 2) Login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "astrodev@gmail.com",
+    "password": "bananinha"
+}
+
+### 3) Get users
+GET http://localhost:3003/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDA2MzI3NSwiZXhwIjoxNjYwMTQ5Njc1fQ.wDq01mG-cmqwt9AlTEL3jDr0EpA5pWqhqqDL3ZbTzi4
+
+### 4) Edit users
+PUT http://localhost:3003/users/f5758478-f072-4d1a-bfb8-15b8738cbabb
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDA2MzI3NSwiZXhwIjoxNjYwMTQ5Njc1fQ.wDq01mG-cmqwt9AlTEL3jDr0EpA5pWqhqqDL3ZbTzi4
+Content-Type: application/json
+
+{
+    "name": "Thiago",
+      "email": "thiago@gmail.com",
+    "password": "abc123"
+}
+
+
+### 5) Delete users
+DELETE http://localhost:3003/users/7079b8e4-95cd-48aa-82a9-77454e94b789
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDA2MzI3NSwiZXhwIjoxNjYwMTQ5Njc1fQ.wDq01mG-cmqwt9AlTEL3jDr0EpA5pWqhqqDL3ZbTzi4
