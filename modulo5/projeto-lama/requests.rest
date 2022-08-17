@@ -1,0 +1,35 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### 1) Signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "Thiago",
+    "email": "vernizzi@gmail.com",
+    "password": "vernizzi123"
+}
+
+### 2) Login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "vernizzi@gmail.com",
+    "password": "vernizzi123"
+}
+
+### 3) Create shows
+POST http://localhost:3003/shows
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjdjYWU0NmFiLWQxMzQtNDA3MC1iNjNmLWVhMGRhZmM4Y2Y3YyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA3NTMwMTQsImV4cCI6MTY2MDgzOTQxNH0.xlY7CgCgl5oYawlGdXW00hCbn-ZFW4WIY_xqPKcxC7E
+Content-Type: application/json
+
+{
+    "band": "Raimundos",
+    "start_at": "2022/08/17"
+}
+
+### 4) Get shows
+GET  http://localhost:3003/shows
+Content-Type: 
