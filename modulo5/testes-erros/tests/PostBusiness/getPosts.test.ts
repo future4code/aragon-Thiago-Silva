@@ -3,7 +3,7 @@ import { PostDatabaseMock } from "../mocks/PostDatabaseMock"
 import { IdGeneratorMock } from "../mocks/services/IdGeneratorMock"
 import { HashManagerMock } from "../mocks/services/HashManagerMock"
 import { AuthenticatorMock } from "../mocks/services/AuthenticatorMock"
-import { ICreatePostInputDTO, IGetPostsInputDTO } from "../../src/models/Post"
+import { IGetPostsInputDTO } from "../../src/models/Post"
 import { BaseError } from "../../src/errors/BaseError"
 
 describe("Testando PostBusiness", () => {
@@ -43,4 +43,5 @@ describe("Testando PostBusiness", () => {
             }
         }
     })
+
 })
