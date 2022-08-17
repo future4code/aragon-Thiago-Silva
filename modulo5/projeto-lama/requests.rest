@@ -32,4 +32,4 @@ Content-Type: application/json
 
 ### 4) Get shows
 GET  http://localhost:3003/shows
-Content-Type: 
+Content-Type: application/application/json

@@ -11,8 +11,7 @@ export class ShowBusiness {
     constructor(
         private showDatabase: ShowDatabase,
         private idGenerator: IdGenerator,
-        private authenticator: Authenticator,
-        private userDatabase: UserDatabase,
+        private authenticator: Authenticator
     ) {}
 
     public createShow = async (input: ICreateShowInputDTO) => {
@@ -33,14 +32,9 @@ export class ShowBusiness {
         }
 
         const id = this.idGenerator.generate()
-
-        const userDB = await this.userDatabase.findById(payload.id)
      
-        if ( userDB.role !== USER_ROLES.ADMIN) {
-            if (userDB.id === payload.id) {
-                throw new UnauthorizedError("Sem autorização")
-            }
-        }
+        if ( payload.role !== USER_ROLES.ADMIN )
+                throw new UnauthorizedError("Erro: apenas usuários 'ADMIN' podem criar shows")
 
         const show = new Show(
             id,
@@ -59,13 +53,6 @@ export class ShowBusiness {
     }
 
     public getShows = async (input: IGetShowsInputDTO) => {
-        const { token } = input
-
-        const payload = this.authenticator.getTokenPayload(token)
-
-        if (!payload) {
-            throw new Error("Não autenticado")
-        }
 
         const showsDB = await this.showDatabase.getShows()
 
@@ -77,11 +64,11 @@ export class ShowBusiness {
             )
         })
 
-        for (let show of shows) {
-            const showId = show.getId()
-            const tickets = await this.showDatabase.getTickets(showId)
-            show.setTickets(tickets)
-        }
+        // for (let show of shows) {
+        //     const showId = show.getId()
+        //     const tickets = await this.showDatabase.getTickets(showId)
+        //     show.setTickets(tickets)
+        // }
 
         const response: IGetShowsOutputDTO = {
             shows
