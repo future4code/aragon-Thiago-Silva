@@ -2,7 +2,7 @@
 <img width="191" alt="logo lama" src="https://user-images.githubusercontent.com/95821657/185833296-73e2048e-01d6-4893-a94e-195c8d6a0be1.png">
 
 # Projeto LAMA - Labenu Music Awards
-https://ior.ad/7CWn?iframeHash=trysteps-1
+
 ![gifs-de-ondas-de-audio-24](https://user-images.githubusercontent.com/95821657/185833259-de5b45a3-0173-4aae-b2e7-8302917dfe73.gif)
 
 O Projeto LAMA (Labenu Music Awards) é um projeto backend construído para gerenciar os eventos e ingressos do festival, com as seguintes funcionalidades:
@@ -86,4 +86,6 @@ Thiago Vernizzi, 2022/08/22 (Aragon Team - Labenu)
 https://www.linkedin.com/in/thiagovernizzi/
 
 LABENU MUSIC AWARDS - THE GREAT TIMES ARE COMING
+
+https://www.youtube.com/watch?v=h_L4Rixya64
 <img width="580" alt="foo fighters lama" src="https://user-images.githubusercontent.com/95821657/185833458-b14f06bb-8bb8-4812-b72e-aa2ec6c8b311.png">
