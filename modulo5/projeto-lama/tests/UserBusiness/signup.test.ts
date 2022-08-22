@@ -17,9 +17,9 @@ describe("Testando UserBusiness", () => {
 
     test("signup bem sucedido", async () => {
         const input: ISignupInputDTO = {
-            name: "alice",
-            email: "alice@gmail.com",
-            password: "alice99"
+            name: "thiago",
+            email: "vernizzi@gmail.com",
+            password: "abc123"
         }
 
         const response = await userBusiness.signup(input)
@@ -34,8 +34,8 @@ describe("Testando UserBusiness", () => {
         try {
             const input: ISignupInputDTO = {
                 name: "",
-                email: "alice@gmail.com",
-                password: "alice99"
+                email: "vernizzi@gmail.com",
+                password: "abc123"
             }
 
             await userBusiness.signup(input)
@@ -53,8 +53,8 @@ describe("Testando UserBusiness", () => {
         try {
             const input = {
                 name: 10,
-                email: "alice@gmail.com",
-                password: "alice99"
+                email: "vernizzi@gmail.com",
+                password: "abc123"
             } as unknown as ISignupInputDTO
 
             await userBusiness.signup(input)
@@ -71,8 +71,8 @@ describe("Testando UserBusiness", () => {
 
         try {
             const input = {
-                name: "alice",
-                email: "alice@gmail.com",
+                name: "thiago",
+                email: "vernizzi@gmail.com",
                 password: 10
             } as unknown as ISignupInputDTO
 

@@ -51,21 +51,35 @@ export class Show {
     }
 }
 
-export interface ICreateShowInputDTO {
+export interface ICreateShowsInputDTO {
     token:string,
     band:string,
-    starts_at:Date
+    startsAt:string
 }
 
-export interface ICreateShowOutputDTO {
+export interface ICreateShowsOutputDTO {
     message:string,
     show:Show
 }
 
-export interface IGetShowsInputDTO {
-    token: string
-}
-
 export interface IGetShowsOutputDTO {
     shows: Show[]
+}
+
+export interface IReserveInputDTO {
+    token: string,
+    showId: string
+}
+
+export interface IAddReserveOutputDTO {
+    message: string
+}
+
+export interface IRemoveReserveInputDTO {
+    token: string,
+    showId: string
+}
+
+export interface  IRemoveReserveOutputDTO {
+    message: string
 }

@@ -33,7 +33,7 @@ describe("Testando UserBusiness", () => {
         try {
             const input: ILoginInputDTO = {
                 email: "astrodev@gmail.com",
-                password: "bnanainha"
+                password: "bnanainah"
             }
 
             await userBusiness.login(input)
@@ -61,5 +61,4 @@ describe("Testando UserBusiness", () => {
         }
     }
 })
-
 }) 
