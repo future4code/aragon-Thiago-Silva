@@ -1,6 +1,9 @@
+![](../../../logo%20lama.png)
 # Projeto LAMA - Labenu Music Awards
 
-O projeto LAMA é um aplicativo rede social com o objetivo de promover a conexão e interação entre seus mais diversos usuários, com as seguintes funcionalidades básicas:
+![](../../../gifs-de-ondas-de-audio-24.gif)
+
+O Projeto LAMA (Labenu Music Awards) é um projeto backend construído para gerenciar os eventos e ingressos do festival, com as seguintes funcionalidades:
 
 1- Teste de API;
 
@@ -43,9 +46,14 @@ Estabelece a conexão com o servidor e reinicia automaticamente a porta 3003 do 
 
 ### Testes unitários
 - npm run test
+![](../../../testes%20unit%C3%A1rios%20projeto-lama.png)
+
 
 ### Automação de testes com coverage
 - npm run test -- --collect-coverage
+- O relatório principal fica em ./coverage/lcov-report/index.html
+
+[](../../../coverage%20tests%20projeto-lama.png%0D) ![](../../../testes%20unit%C3%A1rios%20projeto-lama.png) 
 
 ## Tecnologies
 - Node.js;
@@ -66,13 +74,13 @@ Estabelece a conexão com o servidor e reinicia automaticamente a porta 3003 do 
 - Heroku;
 
 ## Documentação Postman
-Para ver a documentação, clique aqui: [Postman](https://documenter.getpostman.com/view/20784974/VUjSGjZf)
+[Clique aqui](https://documenter.getpostman.com/view/20784974/VUqptd3D)
 
 ## Deploy - Heroku
-Para acessar o deploy da aplicação, clique aqui: [Heroku](https://labook-app.herokuapp.com/ping) 
+[Clique aqui](https://app-lama-aragon.herokuapp.com/ping) 
 
 ### Autor
-Thiago Vernizzi, 2022/08/14 (Aragon Team - Labenu)
+Thiago Vernizzi, 2022/08/22 (Aragon Team - Labenu)
 <br/>
 [Contact by email ](mailto:thiago.vernizzi@gmail.com) or
 https://www.linkedin.com/in/thiagovernizzi/
