@@ -1,7 +1,8 @@
-![](../../../logo%20lama.png)
-# Projeto LAMA - Labenu Music Awards
 
-![](../../../gifs-de-ondas-de-audio-24.gif)
+<img width="191" alt="logo lama" src="https://user-images.githubusercontent.com/95821657/185833296-73e2048e-01d6-4893-a94e-195c8d6a0be1.png">
+
+# Projeto LAMA - Labenu Music Awards
+![gifs-de-ondas-de-audio-24](https://user-images.githubusercontent.com/95821657/185833259-de5b45a3-0173-4aae-b2e7-8302917dfe73.gif)
 
 O Projeto LAMA (Labenu Music Awards) é um projeto backend construído para gerenciar os eventos e ingressos do festival, com as seguintes funcionalidades:
 
@@ -46,14 +47,12 @@ Estabelece a conexão com o servidor e reinicia automaticamente a porta 3003 do 
 
 ### Testes unitários
 - npm run test
-![](../../../testes%20unit%C3%A1rios%20projeto-lama.png)
-
+<img width="349" alt="testes unitários projeto-lama" src="https://user-images.githubusercontent.com/95821657/185833350-0367245d-5fc1-4ff8-ad8b-24abec883b6a.png">
 
 ### Automação de testes com coverage
 - npm run test -- --collect-coverage
 - O relatório principal fica em ./coverage/lcov-report/index.html
-
-[](../../../coverage%20tests%20projeto-lama.png%0D) ![](../../../testes%20unit%C3%A1rios%20projeto-lama.png) 
+<img width="957" alt="coverage tests projeto-lama" src="https://user-images.githubusercontent.com/95821657/185833395-c4270d3f-7193-4c30-88b8-c4532d988372.png">
 
 ## Tecnologies
 - Node.js;
@@ -84,3 +83,6 @@ Thiago Vernizzi, 2022/08/22 (Aragon Team - Labenu)
 <br/>
 [Contact by email ](mailto:thiago.vernizzi@gmail.com) or
 https://www.linkedin.com/in/thiagovernizzi/
+
+LABENU MUSIC AWARDS - THE GREAT TIMES ARE COMING
+<img width="580" alt="foo fighters lama" src="https://user-images.githubusercontent.com/95821657/185833458-b14f06bb-8bb8-4812-b72e-aa2ec6c8b311.png">
