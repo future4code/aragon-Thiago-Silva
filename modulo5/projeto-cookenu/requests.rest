@@ -1,0 +1,56 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### Signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "nickname": "vernizzi",
+    "email": "thiago.vernizzi@gmail.com",
+    "password": "vernizzi123"
+}
+
+### Login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "astrodev@gmail.com",
+    "password": "bananinha"
+}
+
+### Create recipe
+POST http://localhost:3003/recipes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTYzNTIyMiwiZXhwIjoxNjU5NzIxNjIyfQ.2g42c7pNkTuOfc0_kAIc0NCwfLK-MQOn6fM-yLMFvhc
+Content-Type: application/json
+
+{
+    "title": "Bolo integral de banana",
+    "description": "Bolo integral de banana com canela, frutas secas e castanhas."
+}
+
+### Get all recipes
+GET http://localhost:3003/recipes?q=kibe
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTY1OTg2MSwiZXhwIjoxNjU5NzQ2MjYxfQ.iCVZFquitaz7cUNWII0dekyO0DM9fxZzhl1jcXu7bEU
+
+### Get all users
+GET http://localhost:3003/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTYzMTcxNSwiZXhwIjoxNjU5NzE4MTE1fQ.mXjr2Motr52xmjSkiw90kFQ6tXGCv1KAKcZDBEnmQkU
+
+### Edit recipe
+PUT http://localhost:3003/recipes/103
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTU1ODA2OSwiZXhwIjoxNjU5NjQ0NDY5fQ.IIN6AIpnRLjLoZlA1AQ1Fz1Euw8T79phqOFe5spV0uQ
+Content-Type: application/json
+
+{
+    "title": "Kibe vegano com alho poró"
+}
+
+### Delete recipe
+DELETE http://localhost:3003/recipes/c238a763-2100-47bc-a1bf-e8a6acf89614
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTU1ODA2OSwiZXhwIjoxNjU5NjQ0NDY5fQ.IIN6AIpnRLjLoZlA1AQ1Fz1Euw8T79phqOFe5spV0uQ
+
+### Delete user
+DELETE http://localhost:3003/users/40026681-a2ed-4d64-85ab-2132d3475fa7
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTU1ODA2OSwiZXhwIjoxNjU5NjQ0NDY5fQ.IIN6AIpnRLjLoZlA1AQ1Fz1Euw8T79phqOFe5spV0uQ
