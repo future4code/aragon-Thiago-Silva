@@ -1,0 +1,47 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+
+### Endpoint signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "name": "Thiago",
+    "email": "vernizzi@gmail.com",
+    "password": "abc123"
+}
+
+
+### Endpoint login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "astrodev@gmail.com",
+    "password": "bananinha"
+}
+
+
+### Endpoint create show
+POST http://localhost:3003/shows
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDk0OTgyOCwiZXhwIjoxNjYxMDM2MjI4fQ.OzAkq_kTQsZMKyvZK3g9XcaNbW8CZ7wd8oOq_sz7MtI
+Content-Type: application/json
+
+{
+    "band": "Raimundos",
+    "startAt": "2022/12/08"
+}
+
+
+### Endpoint get shows
+GET http://localhost:3003/shows
+
+
+### Endpoint buy ticket
+POST http://localhost:3003/shows/ticket/2b2882d1-1df2-4de6-b0a8-41b86b916db1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDk0OTgyOCwiZXhwIjoxNjYxMDM2MjI4fQ.OzAkq_kTQsZMKyvZK3g9XcaNbW8CZ7wd8oOq_sz7MtI 
+
+### Endpoint delete ticket
+DELETE http://localhost:3003/shows/ticket/301
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDk0OTgyOCwiZXhwIjoxNjYxMDM2MjI4fQ.OzAkq_kTQsZMKyvZK3g9XcaNbW8CZ7wd8oOq_sz7MtI
