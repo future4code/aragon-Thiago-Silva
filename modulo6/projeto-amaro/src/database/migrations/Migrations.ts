@@ -1,7 +1,7 @@
 import { BaseDatabase } from "../BaseDatabase"
-import { ShowDatabase } from "../ShowDatabase"
+import { ProductDatabase } from "../ProductDatabase"
 import { UserDatabase } from "../UserDatabase"
-import { shows, tickets, users } from "./data"
+import { products, tags, users, productsTags } from "./data"
 
 class Migrations extends BaseDatabase {
     execute = async () => {
@@ -27,10 +27,10 @@ class Migrations extends BaseDatabase {
 
     createTables = async () => {
         await BaseDatabase.connection.raw(`
-        DROP TABLE IF EXISTS ${ShowDatabase.TABLE_TICKETS};
-        DROP TABLE IF EXISTS ${ShowDatabase.TABLE_SHOWS};
+        DROP TABLE IF EXISTS ${ProductDatabase.TABLE_PRODUCT_TAGS};
+        DROP TABLE IF EXISTS ${ProductDatabase.TABLE_TAGS};
+        DROP TABLE IF EXISTS ${ProductDatabase.TABLE_PRODUCTS};
         DROP TABLE IF EXISTS ${UserDatabase.TABLE_USERS};
-        
         CREATE TABLE IF NOT EXISTS ${UserDatabase.TABLE_USERS}(
             id VARCHAR(255) PRIMARY KEY,
             name VARCHAR(255) NOT NULL,
@@ -38,19 +38,20 @@ class Migrations extends BaseDatabase {
             password VARCHAR(255) NOT NULL,
             role ENUM("NORMAL", "ADMIN") DEFAULT "NORMAL" NOT NULL
         );
-
-        CREATE TABLE IF NOT EXISTS ${ShowDatabase.TABLE_SHOWS}(
+        CREATE TABLE IF NOT EXISTS ${ProductDatabase.TABLE_PRODUCTS}(
             id VARCHAR(255) PRIMARY KEY,
-            band VARCHAR(255) NOT NULL,
-            starts_at DATE NOT NULL
+            name VARCHAR(255) NOT NULL
         );
-
-        CREATE TABLE IF NOT EXISTS ${ShowDatabase.TABLE_TICKETS}(
+        CREATE TABLE IF NOT EXISTS ${ProductDatabase.TABLE_TAGS}(
             id VARCHAR(255) PRIMARY KEY,
-            show_id VARCHAR(255) NOT NULL,
-            user_id VARCHAR(255) NOT NULL,
-            FOREIGN KEY (user_id) REFERENCES ${UserDatabase.TABLE_USERS}(id),
-            FOREIGN KEY (show_id) REFERENCES ${ShowDatabase.TABLE_SHOWS}(id)
+            name VARCHAR(255) NOT NULL
+        );
+        CREATE TABLE IF NOT EXISTS ${ProductDatabase.TABLE_PRODUCT_TAGS}(
+            id VARCHAR(255) PRIMARY KEY,
+            product_id VARCHAR(255) NOT NULL,
+            tag_id VARCHAR(255) NOT NULL,
+            FOREIGN KEY (product_id)REFERENCES ${ProductDatabase.TABLE_PRODUCTS}(id),
+            FOREIGN KEY (tag_id)REFERENCES ${ProductDatabase.TABLE_TAGS}(id)
         );
         `)
     }
@@ -61,12 +62,16 @@ class Migrations extends BaseDatabase {
             .insert(users)
 
         await BaseDatabase
-            .connection(ShowDatabase.TABLE_SHOWS)
-            .insert(shows)
+            .connection(ProductDatabase.TABLE_PRODUCTS)
+            .insert(products)
 
         await BaseDatabase
-            .connection(ShowDatabase.TABLE_TICKETS)
-            .insert(tickets)
+        .connection(ProductDatabase.TABLE_TAGS)
+        .insert(tags) 
+
+        await BaseDatabase
+        .connection(ProductDatabase.TABLE_PRODUCT_TAGS)
+        .insert(productsTags)
     }
 }
 

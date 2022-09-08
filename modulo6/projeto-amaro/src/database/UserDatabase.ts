@@ -2,7 +2,7 @@ import { IUserDB, User } from "../models/User"
 import { BaseDatabase } from "./BaseDatabase"
 
 export class UserDatabase extends BaseDatabase {
-    public static TABLE_USERS = "Lama_Users"
+    public static TABLE_USERS = "Amaro_Users"
 
     public toUserDBModel = (user: User) => {
         const userDB: IUserDB = {

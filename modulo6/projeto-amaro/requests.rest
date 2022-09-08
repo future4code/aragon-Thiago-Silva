@@ -7,41 +7,48 @@ POST http://localhost:3003/users/signup
 Content-Type: application/json
 
 {
-    "name": "Thiago",
-    "email": "vernizzi@gmail.com",
-    "password": "abc123"
+    "name": "Eduardo",
+    "email": "eduardo@gmail.com",
+    "password": "dudu123"
 }
-
 
 ### Endpoint login
 POST http://localhost:3003/users/login
 Content-Type: application/json
 
 {
-    "email": "astrodev@gmail.com",
+    "email": "vernizzi@gmail.com",
     "password": "bananinha"
 }
 
-
-### Endpoint create show
-POST http://localhost:3003/shows
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDk0OTgyOCwiZXhwIjoxNjYxMDM2MjI4fQ.OzAkq_kTQsZMKyvZK3g9XcaNbW8CZ7wd8oOq_sz7MtI
+### Create product
+POST http://localhost:3003/products
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MjY0MzcxNiwiZXhwIjoxNjYyNzMwMTE2fQ.bZK9d6G5HpBrosEXzcKcPbKgpFLyL3c9gsEAiMi3BLc
 Content-Type: application/json
 
 {
-    "band": "Raimundos",
-    "startAt": "2022/12/08"
+    "name": "VESTIDO SLIPDRESS CETIM",
+    "tag": ["neutro, balada"]
 }
 
+### Get products
+GET http://localhost:3003/products
 
-### Endpoint get shows
-GET http://localhost:3003/shows
+### Get search products by id or name
+GET http://localhost:3003/products/search?q=8360
 
+### 6) Get search products by tag
+GET http://localhost:3003/products/search/tag?q=balada
 
-### Endpoint buy ticket
-POST http://localhost:3003/shows/ticket/2b2882d1-1df2-4de6-b0a8-41b86b916db1
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDk0OTgyOCwiZXhwIjoxNjYxMDM2MjI4fQ.OzAkq_kTQsZMKyvZK3g9XcaNbW8CZ7wd8oOq_sz7MtI 
+### 6) Edit product
+PUT http://localhost:3003/products/8360
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MjY0MzcxNiwiZXhwIjoxNjYyNzMwMTE2fQ.bZK9d6G5HpBrosEXzcKcPbKgpFLyL3c9gsEAiMi3BLc
+Content-Type: application/json
 
-### Endpoint delete ticket
-DELETE http://localhost:3003/shows/ticket/301
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MDk0OTgyOCwiZXhwIjoxNjYxMDM2MjI4fQ.OzAkq_kTQsZMKyvZK3g9XcaNbW8CZ7wd8oOq_sz7MtI
+{
+    "name": "VESTIDO BABADOS KNIT"
+}
+
+### 7) Delete product
+DELETE http://localhost:3003/products/d687b589-9b31-41d7-803d-617d9569848a
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEwMSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY2MjY0MzcxNiwiZXhwIjoxNjYyNzMwMTE2fQ.bZK9d6G5HpBrosEXzcKcPbKgpFLyL3c9gsEAiMi3BLc
