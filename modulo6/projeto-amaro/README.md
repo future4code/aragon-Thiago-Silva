@@ -1,4 +1,5 @@
 <img width="174" alt="image" src="https://user-images.githubusercontent.com/95821657/189329591-685b32e3-398a-44de-874b-85a0985e9791.png">
+![amaro](https://user-images.githubusercontent.com/95821657/189331323-437c6188-c0ab-44dc-a1f8-4b26b1fe5f5f.gif)
 
 Amaro-Project is a simplified application with the following functionalities: register user, log in, register, consult, edit and delete products (CRUD):
 
@@ -28,7 +29,7 @@ configure with your database information:
 - BCRYPT_SALT_ROUNDS = 12
 
 ## Create and populate tables
-npm run migrations Create and populate the tables in the database based on the data.ts file
+- npm run migrations = Create and populate the tables in the database based on the data.ts file
 
 ## Testes unitários
 - npm run test
