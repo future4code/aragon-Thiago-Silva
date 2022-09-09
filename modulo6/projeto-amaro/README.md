@@ -1,5 +1,6 @@
 <img width="174" alt="image" src="https://user-images.githubusercontent.com/95821657/189329591-685b32e3-398a-44de-874b-85a0985e9791.png">
-![amaro](https://user-images.githubusercontent.com/95821657/189331323-437c6188-c0ab-44dc-a1f8-4b26b1fe5f5f.gif)
+<img width="350" alt="gif amaro" src="https://user-images.githubusercontent.com/95821657/189331589-fc513cfe-4051-4262-9140-4d0dcd9e6c15.gif">
+
 
 Amaro-Project is a simplified application with the following functionalities: register user, log in, register, consult, edit and delete products (CRUD):
 
